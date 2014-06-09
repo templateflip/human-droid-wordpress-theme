@@ -1,13 +1,13 @@
 <?php
 /**
- * The template for displaying search forms in Developr
+ * The template for displaying search forms in Publishr
  *
- * @package Developr
+ * @package Publishr
  */
 ?>
 <form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 	<div class="form-group">
-		<span class="screen-reader-text"><?php _ex( 'Search for:', 'label', 'developr' ); ?></span>
-        <input type="text" class="search form-control" name="s" onblur="if(this.value=='')this.value='<?php _e('To search type and hit enter','developr'); ?>';" onfocus="if(this.value=='<?php _e('To search type and hit enter','developr'); ?>')this.value='';" value="<?php _e('To search type and hit enter','developr'); ?>" />
+		<span class="screen-reader-text"><?php _ex( 'Search for:', 'label', 'publishr' ); ?></span>
+        <input type="text" class="search form-control" name="s" onblur="if(this.value=='')this.value='<?php _e('To search type and hit enter','publishr'); ?>';" onfocus="if(this.value=='<?php _e('To search type and hit enter','publishr'); ?>')this.value='';" value="<?php _e('To search type and hit enter','publishr'); ?>" />
 	</div>
 </form>

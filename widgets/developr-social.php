@@ -1,13 +1,13 @@
 <?php
 /*
-	Developr Social Follow Widget
+	Publishr Social Follow Widget
 	
 	License: GNU General Public License v3.0
 	License URI: http://www.gnu.org/licenses/gpl-3.0.html
 	
 	Copyright: (c) 2013 Kanishk Kunal - http://kanishkkunal.in
 	
-		@package developr
+		@package publishr
 		@version 1.0
 */
 
@@ -16,7 +16,7 @@ class DeveloprSocial extends WP_Widget {
 /*  Constructor
 /* ------------------------------------ */
 	function DeveloprSocial() {
-		parent::__construct( false, 'Developr Social Buttons', array('description' => 'Displays Social Follow buttons set in the Theme Options -> Social Links', 'classname' => 'widget_developr_social') );;	
+		parent::__construct( false, 'Publishr Social Buttons', array('description' => 'Displays Social Follow buttons set in the Theme Options -> Social Links', 'classname' => 'widget_developr_social') );;	
 	}
 	
 /*  Widget
@@ -52,7 +52,7 @@ class DeveloprSocial extends WP_Widget {
 		$instance = wp_parse_args( (array) $instance, $defaults );
 ?>
 
-	<div class="developr-options-social">
+	<div class="publishr-options-social">
 		<p>
 			<label for="<?php echo $this->get_field_id('title'); ?>">Title:</label>
 			<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($instance["title"]); ?>" />

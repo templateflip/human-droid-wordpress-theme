@@ -1,8 +1,8 @@
 <?php
 /**
- * Developr Theme Customizer
+ * Publishr Theme Customizer
  *
- * @package Developr
+ * @package Publishr
  */
 
 /**

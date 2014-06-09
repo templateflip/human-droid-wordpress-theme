@@ -1,10 +1,10 @@
 <?php
 /**
- * Developr functions and definitions
+ * Publishr functions and definitions
  *
  * Use a child theme instead of placing custom functions here
  * http://codex.wordpress.org/Child_Themes
- * @package Developr
+ * @package Publishr
  */
 
 
@@ -38,16 +38,16 @@ function developr_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on Developr, use a find and replace
-	 * to change 'developr' to the name of your theme in all the template files
+	 * If you're building a theme based on Publishr, use a find and replace
+	 * to change 'publishr' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'developr', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'publishr', get_template_directory() . '/languages' );
 
     // Load theme options
     load_template( get_template_directory() . '/inc/theme-options.php' );
 
     // Load custom widgets
-    load_template( get_template_directory() . '/widgets/developr-social.php' );
+    load_template( get_template_directory() . '/widgets/publishr-social.php' );
 
 
     // Load dynamic styles
@@ -69,7 +69,7 @@ function developr_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'developr' ),
+		'primary' => __( 'Primary Menu', 'publishr' ),
 	) );
 
 	// Enable support for Post Formats.
@@ -89,7 +89,7 @@ add_action( 'after_setup_theme', 'developr_setup' );
  */
 function developr_widgets_init() {
     register_sidebar( array(
-		'name'          => __( 'Full-width Footer for ads etc.', 'developr' ),
+		'name'          => __( 'Full-width Footer for ads etc.', 'publishr' ),
 		'id'            => 'above-footer',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -98,7 +98,7 @@ function developr_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Footer-1', 'developr' ),
+		'name'          => __( 'Footer-1', 'publishr' ),
 		'id'            => 'footer-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -107,7 +107,7 @@ function developr_widgets_init() {
 	) );
 
     register_sidebar( array(
-		'name'          => __( 'Footer-2', 'developr' ),
+		'name'          => __( 'Footer-2', 'publishr' ),
 		'id'            => 'footer-2',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -116,7 +116,7 @@ function developr_widgets_init() {
 	) );
 
     register_sidebar( array(
-		'name'          => __( 'Footer-3', 'developr' ),
+		'name'          => __( 'Footer-3', 'publishr' ),
 		'id'            => 'footer-3',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -133,7 +133,7 @@ function developr_scripts() {
     //wp_enqueue_style( 'open-sans', '//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700');
     wp_enqueue_style( 'bootstrap', '//netdna.bootstrapcdn.com/bootswatch/3.1.0/yeti/bootstrap.min.css' );
     wp_enqueue_style( 'font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' );
-	wp_enqueue_style( 'developr-style', get_stylesheet_uri(), NULL, "0.8" );
+	wp_enqueue_style( 'publishr-style', get_stylesheet_uri(), NULL, "0.8" );
 
 	//wp_enqueue_script( 'bootstrap-affix', get_template_directory_uri() . '/js/jquery.affix.js', array('jquery'), '20140120', true );
     wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ),'', true ); 

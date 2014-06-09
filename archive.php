@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Developr
+ * @package Publishr
  */
 
 get_header(); ?>
@@ -24,46 +24,46 @@ get_header(); ?>
 							single_tag_title();
 
 						elseif ( is_author() ) :
-							printf( __( 'Author: %s', 'developr' ), '<span class="vcard">' . get_the_author() . '</span>' );
+							printf( __( 'Author: %s', 'publishr' ), '<span class="vcard">' . get_the_author() . '</span>' );
 
 						elseif ( is_day() ) :
-							printf( __( 'Day: %s', 'developr' ), '<span>' . get_the_date() . '</span>' );
+							printf( __( 'Day: %s', 'publishr' ), '<span>' . get_the_date() . '</span>' );
 
 						elseif ( is_month() ) :
-							printf( __( 'Month: %s', 'developr' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'developr' ) ) . '</span>' );
+							printf( __( 'Month: %s', 'publishr' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'publishr' ) ) . '</span>' );
 
 						elseif ( is_year() ) :
-							printf( __( 'Year: %s', 'developr' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'developr' ) ) . '</span>' );
+							printf( __( 'Year: %s', 'publishr' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'publishr' ) ) . '</span>' );
 
 						elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
-							_e( 'Asides', 'developr' );
+							_e( 'Asides', 'publishr' );
 
 						elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) :
-							_e( 'Galleries', 'developr');
+							_e( 'Galleries', 'publishr');
 
 						elseif ( is_tax( 'post_format', 'post-format-image' ) ) :
-							_e( 'Images', 'developr');
+							_e( 'Images', 'publishr');
 
 						elseif ( is_tax( 'post_format', 'post-format-video' ) ) :
-							_e( 'Videos', 'developr' );
+							_e( 'Videos', 'publishr' );
 
 						elseif ( is_tax( 'post_format', 'post-format-quote' ) ) :
-							_e( 'Quotes', 'developr' );
+							_e( 'Quotes', 'publishr' );
 
 						elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
-							_e( 'Links', 'developr' );
+							_e( 'Links', 'publishr' );
 
 						elseif ( is_tax( 'post_format', 'post-format-status' ) ) :
-							_e( 'Statuses', 'developr' );
+							_e( 'Statuses', 'publishr' );
 
 						elseif ( is_tax( 'post_format', 'post-format-audio' ) ) :
-							_e( 'Audios', 'developr' );
+							_e( 'Audios', 'publishr' );
 
 						elseif ( is_tax( 'post_format', 'post-format-chat' ) ) :
-							_e( 'Chats', 'developr' );
+							_e( 'Chats', 'publishr' );
 
 						else :
-							_e( 'Archives', 'developr' );
+							_e( 'Archives', 'publishr' );
 
 						endif;
 					?>

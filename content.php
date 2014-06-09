@@ -1,6 +1,6 @@
 <?php
 /**
- * @package Developr
+ * @package Publishr
  */
 ?>
 
@@ -32,7 +32,7 @@
                <?php the_content(); ?>
 	        </div>
             <footer class="entry-meta">
-			        <?php the_tags('<p class="post-tags"><span>'.__('TAGS:','developr').'</span> <span class="label label-default">','</span> <span class="label label-default">','</span></p>'); ?>
+			        <?php the_tags('<p class="post-tags"><span>'.__('TAGS:','publishr').'</span> <span class="label label-default">','</span> <span class="label label-default">','</span></p>'); ?>
                 <div>
                     <a href="<?php comments_link(); ?>"><i class="fa fa-comment"></i> <?php comments_number( 'Write a Comment', '1 Comment', '% Comments' ); ?></a>
                 </div>
@@ -46,7 +46,7 @@
                <?php the_excerpt(); ?>
 	        </div><!-- .entry-summary -->
             <div class="more-tag">
-                <a class="" href="<?php the_permalink(); ?>" ><?php echo __( 'Read More', 'developr' ) ?> &rarr;</a>
+                <a class="" href="<?php the_permalink(); ?>" ><?php echo __( 'Read More', 'publishr' ) ?> &rarr;</a>
             </div>
     <?php
 		}

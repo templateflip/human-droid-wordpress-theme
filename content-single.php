@@ -1,6 +1,6 @@
 <?php
 /**
- * @package Developr
+ * @package Publishr
  */
 ?>
 
@@ -13,7 +13,7 @@
             <?php the_category(', '); ?>
 
             <a href="<?php the_permalink(); ?>"><?php developr_posted_on(); ?></a>
-            <?php edit_post_link( __( 'Edit', 'developr' ), '<span class="edit-link">', '</span>' ); ?>
+            <?php edit_post_link( __( 'Edit', 'publishr' ), '<span class="edit-link">', '</span>' ); ?>
 	    </div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
@@ -21,13 +21,13 @@
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'developr' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'publishr' ),
 				'after'  => '</div>',
 			) );
 		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-meta">
-			<?php the_tags('<p class="post-tags"><span>'.__('TAGS:','developr').'</span> <span class="label label-default">','</span> <span class="label label-default">','</span></p>'); ?>
+			<?php the_tags('<p class="post-tags"><span>'.__('TAGS:','publishr').'</span> <span class="label label-default">','</span> <span class="label label-default">','</span></p>'); ?>
 	</footer><!-- .entry-meta -->
 </article><!-- #post-## -->
