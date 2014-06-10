@@ -11,6 +11,8 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
@@ -19,28 +21,55 @@
 </head>
 
 <body <?php body_class(); ?>>
+<a id="top" href="#content" class="sr-only">Skip to main content</a>
 <div id="page" class="hfeed site">
     
     <?php do_action( 'before' ); ?>
-    <div id="topbar" class="navbar navbar-default">
+      <div id="topbar">
         <?php if (has_nav_menu('primary')): ?>
-			<nav class="nav-container group" id="nav-topbar">                
-				<div class="nav-toggle"><i class="fa fa-bars"></i></div>
-				<div class="nav-text"><!-- put your mobile menu text here --></div>
-				<div class="nav-wrap"><?php wp_nav_menu(array('theme_location'=>'primary','menu_class'=>'nav container-inner group','container'=>'','menu_id' => '','fallback_cb'=> false)); ?></div>
-				
-				<div>	
-					<div class="toggle-search"><i class="fa fa-search"></i></div>
-					<div class="search-expand">
-						<div class="search-expand-inner">
-							<?php get_search_form(); ?>
-						</div>
-					</div>
-				</div><!--/.container-->
-				
-			</nav><!--/#nav-topbar-->
+            <nav class="navbar navbar-default navbar-top" role="navigation">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                        <a class="navbar-brand" href="<?php echo home_url(); ?>" rel="home">
+                            <h1 class="brand-text-h1">
+                            <?php if(ot_get_option('custom-image')) { ?>
+                                    <img src="<?php echo ot_get_option('custom-image'); ?>" width="42px" height="42px" alt="<?php bloginfo('name') ?>" title="<?php bloginfo('name') ?>"/>
+                            <?php      
+                                  }
+                            ?>
+				                <span class="hidden-xs"><?php bloginfo('name') ?></span>
+                            </h1>
+                        </a>
+                    </div>
+                    
+                    <div class="navbar-collapse collapse">
+                        
+                        <?php
+                            wp_nav_menu( array(
+                                'menu'              => 'primary',
+                                'theme_location'    => 'primary',
+                                'depth'             => 2,
+                                'container'         => 'div',
+                                'container_class'   => '',
+                                'menu_class'        => 'nav navbar-nav navbar-right',
+                                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+                                'walker'            => new wp_bootstrap_navwalker())
+                            );
+                        ?>
+                    </div>
+                </div>
+            </nav>
 		<?php endif; ?>
     </div>
+
 	<header id="masthead" class="jumbotron site-header text-center" role="banner">
         <div class="container">
             <?php
