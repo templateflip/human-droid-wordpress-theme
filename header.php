@@ -22,7 +22,7 @@
 <div id="page" class="hfeed site">
     
     <?php do_action( 'before' ); ?>
-    <div id="topbar">
+    <div id="topbar" class="navbar navbar-default">
         <?php if (has_nav_menu('primary')): ?>
 			<nav class="nav-container group" id="nav-topbar">                
 				<div class="nav-toggle"><i class="fa fa-bars"></i></div>

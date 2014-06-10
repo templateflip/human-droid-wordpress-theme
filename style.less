@@ -25,12 +25,11 @@ and Blueprint http://www.blueprintcss.org/
 /* =Global
 ----------------------------------------------- */
 
-@background-color: #222;
-@link-color: #e67e22;
+@background-color: #fff;
+@link-color: #2ab9b3;
 @content-background: #fff;
 @padding: 24px;
-@content-width: 720px;
-@bg-image: url('images/patterns/ObliqueLine-10x10px.png');
+@content-width: 960px;
 
 
 /* mix-in */
@@ -100,7 +99,6 @@ a:hover, a:focus {
 /* Header styling */
 .site-header {
     background-color: lighten(@background-color, 5%);
-    background-image: @bg-image;
     color: lighten(@background-color, 55%);
     position: relative;
     padding: 1.5 * @padding 0 2 * @padding;
@@ -305,7 +303,7 @@ display: block;
 ----------------------------------------------- */
 
 .sticky .fa-star {
-   color: @background-color;
+   color: @link-color;
 }
 .hentry {
 	margin: 0 0 1.5em;
@@ -615,7 +613,6 @@ input[type="submit"]:hover {
 #secondary {
     background: lighten(@background-color, 5%);
     color: lighten(@background-color, 50%);
-    background-image: @bg-image;
     padding: @padding 0;
 }
 
@@ -753,7 +750,7 @@ font-size: 18px;
     line-height: 1.7em;
     color: lighten(@background-color, 40%);
     text-align: center;
-    background: @background-color;
+    background: @content-background;
 }
 
 .site-footer a {
@@ -770,10 +767,10 @@ margin-left: -15px;
 text-align: center;
 line-height: 2.6rem;
 border-radius: 50px;
-background:  @background-color;
+background:  #eee;
 transition: box-shadow 0.5s;
 text-decoration: none;
-color: #fff;
+color: #222;
 }
 
 .widget-area {
@@ -852,19 +849,17 @@ text-transform: uppercase;
 }
 
 #topbar {
-    background-color: @background-color;
     padding-top: 0; padding-bottom: 0;
     position: relative;
 }
 
-.nav-container { background-color: @background-color; z-index: 99; position: relative; }
-.nav-toggle { display: none; background: @background-color; cursor: pointer; float: right; height: 50px; width: 60px; color: #fff; text-align: center; }
+.nav-container { z-index: 99; position: relative; }
+.nav-toggle { display: none; cursor: pointer; float: right; height: 50px; width: 60px; color: #fff; text-align: center; }
 .nav-toggle i { font-size: 29px; padding: 10px 0; }
 .nav-text { display: none; float: right; font-size: 16px; line-height: 24px; padding: 13px 20px; }
 .nav ul {
     list-style-type: none;
     padding-left: 0;
-    background: @background-color;
 }
 .nav li > a:hover { text-decoration: none; }
 .nav li > a:after,
