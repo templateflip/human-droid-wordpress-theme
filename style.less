@@ -26,10 +26,13 @@ and Blueprint http://www.blueprintcss.org/
 ----------------------------------------------- */
 
 @dark-color: #181818;
-@link-color: #2ab9b3;
+@link-color: #099;
 @content-background: #fff;
 @padding: 24px;
 @content-width: 1000px;
+.heading-font {
+    line-height: 1.25;
+}
 
 .maxed-width {
     max-width: @content-width;
@@ -40,6 +43,10 @@ and Blueprint http://www.blueprintcss.org/
 /* Bootstrap Style overrides */
 body, table {
     line-height: 1.685;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+    .heading-font();
 }
 
 h1, h2, h3, h4, h5, h6 {color: #333; font-weight: 400;}
@@ -121,7 +128,6 @@ font-weight: 300;
 
 .blogroll {
      margin-bottom:  2 * @padding;
-     padding-bottom:  2 * @padding;
      border-bottom: 1px dotted #e5e5e5;
 }
 .widget .blogroll {
@@ -576,6 +582,7 @@ input[type="submit"]:hover {
     padding-bottom: @padding / 2;
     border-bottom: 1px solid #e5e5e5;
     color:  #474747;
+    .heading-font();
 }
 
 .widget-title a {

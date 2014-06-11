@@ -23,6 +23,9 @@ and Blueprint http://www.blueprintcss.org/
 */
 /* =Global
 ----------------------------------------------- */
+.heading-font {
+  line-height: 1.25;
+}
 .maxed-width {
   max-width: 1000px;
   margin-left: auto;
@@ -32,6 +35,16 @@ and Blueprint http://www.blueprintcss.org/
 body,
 table {
   line-height: 1.685;
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+  line-height: 1.25;
 }
 h1,
 h2,
@@ -63,11 +76,11 @@ p {
 }
 a,
 .link {
-  color: #2ab9b3;
+  color: #009999;
 }
 a:hover,
 a:focus {
-  color: #42d4ce;
+  color: #00cccc;
 }
 #content.col-md-8,
 #content.col-sm-8 {
@@ -120,7 +133,6 @@ a:focus {
 }
 .blogroll {
   margin-bottom: 48px;
-  padding-bottom: 48px;
   border-bottom: 1px dotted #e5e5e5;
 }
 .widget .blogroll {
@@ -245,7 +257,7 @@ big {
 /* =Content
 ----------------------------------------------- */
 .sticky .fa-star {
-  color: #2ab9b3;
+  color: #009999;
 }
 .hentry {
   margin: 0 0 1.5em;
@@ -485,10 +497,10 @@ textarea {
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-  border: 1px solid #2ab9b3;
+  border: 1px solid #009999;
 }
 input[type="submit"] {
-  background: #2ab9b3;
+  background: #009999;
   color: #fff;
   padding: 8px 14px;
   font-weight: 600;
@@ -497,7 +509,7 @@ input[type="submit"] {
   cursor: pointer;
 }
 input[type="submit"]:hover {
-  background: #25a49f;
+  background: #007f80;
 }
 /* =Widgets
 ----------------------------------------------- */
@@ -537,6 +549,7 @@ input[type="submit"]:hover {
   padding-bottom: 12px;
   border-bottom: 1px solid #e5e5e5;
   color: #474747;
+  line-height: 1.25;
 }
 .widget-title a {
   color: inherit;
@@ -553,7 +566,7 @@ input[type="submit"]:hover {
 /* ------------------------------------ */
 .widget_calendar a {
   font-weight: 600;
-  color: #2ab9b3;
+  color: #009999;
 }
 .widget_calendar a:hover {
   color: #444!important;
@@ -562,7 +575,7 @@ input[type="submit"]:hover {
   width: 100%;
 }
 .widget_calendar caption {
-  background: #2ab9b3;
+  background: #009999;
   color: #fff;
   padding: 5px 10px;
 }
@@ -670,7 +683,7 @@ input[type="submit"]:hover {
   color: #444!important;
 }
 .wp-pagenavi a {
-  color: #2ab9b3;
+  color: #009999;
   border: none!important;
   border-bottom: 3px solid #ddd!important;
   border-top: 1px solid #f1f1f1!important;
@@ -680,7 +693,7 @@ input[type="submit"]:hover {
 .wp-pagenavi span.current {
   background: none;
   border: none!important;
-  border-bottom: 3px solid #2ab9b3 !important;
+  border-bottom: 3px solid #009999 !important;
   border-top: 1px solid #f1f1f1!important;
 }
 /* Footer */

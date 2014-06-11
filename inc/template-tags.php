@@ -149,7 +149,7 @@ function developr_posted_on() {
 		esc_html( get_the_modified_date() )
 	);
 
-	printf( __( '<span class="posted-on"><i class="fa fa-clock-o"></i> %1$s</span><span class="byline"></span>', 'publishr' ),
+	printf( __( '<i class="fa fa-calendar"></i><span class="posted-on">%1$s</span><span class="byline"></span>', 'publishr' ),
 		sprintf( '<a href="%1$s" rel="bookmark">%2$s</a>',
 			esc_url( get_permalink() ),
 			$time_string

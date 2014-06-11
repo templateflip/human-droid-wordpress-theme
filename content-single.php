@@ -10,7 +10,6 @@
 
         <div class="entry-meta">
 		    
-            <?php the_category(', '); ?>
 
             <a href="<?php the_permalink(); ?>"><?php developr_posted_on(); ?></a>
             <?php edit_post_link( __( 'Edit', 'publishr' ), '<span class="edit-link">', '</span>' ); ?>

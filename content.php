@@ -11,13 +11,12 @@
     <?php if ( 'post' == get_post_type() ) : ?>
         <div class="entry-meta">
 		    
-            <?php the_category(', '); ?>
 
             <a href="<?php the_permalink(); ?>"><?php developr_posted_on(); ?></a>
 	    </div><!-- .entry-meta -->
 	<?php endif; ?>
     
-	<?php if ( has_post_thumbnail() ): ?>
+	<?php if ( has_post_thumbnail() && ( ot_get_option('post-text') != 'content' ) ): ?>
         <div class="post-thumbnail">
             <a href="<?php the_permalink(); ?>" rel="bookmark">
 			    <?php the_post_thumbnail('thumb-medium'); ?>
@@ -34,7 +33,7 @@
             <footer class="entry-meta">
 			        <?php the_tags('<p class="post-tags"><span>'.__('TAGS:','publishr').'</span> <span class="label label-default">','</span> <span class="label label-default">','</span></p>'); ?>
                 <div>
-                    <a href="<?php comments_link(); ?>"><i class="fa fa-comment"></i> <?php comments_number( 'Write a Comment', '1 Comment', '% Comments' ); ?></a>
+                    <a href="<?php comments_link(); ?>"><i class="fa fa-comment"></i> <?php comments_number( 'Leave a Comment', '1 Comment', '% Comments' ); ?></a>
                 </div>
 	        </footer><!-- .entry-meta -->
             
