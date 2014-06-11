@@ -23,19 +23,8 @@ and Blueprint http://www.blueprintcss.org/
 */
 /* =Global
 ----------------------------------------------- */
-/* mix-in */
-.full-width {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-}
 .maxed-width {
-  max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.maxed-width2 {
-  max-width: 1344px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -80,16 +69,21 @@ a:hover,
 a:focus {
   color: #42d4ce;
 }
+#content.col-md-8,
+#content.col-sm-8 {
+  width: 71%;
+}
+#sidebar-content.col-md-4,
+#sidebar-content.col-sm-4 {
+  width: 29%;
+}
 .container {
-  max-width: 960px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
 }
 .content-area {
   background: #ffffff;
-  width: 100%;
-  padding: 0;
-  margin: 0;
 }
 /*header */
 .brand-text-h1 {
@@ -119,26 +113,23 @@ a:focus {
 /* Article styling */
 .site-content {
   background: #ffffff;
-  padding-top: 24px;
 }
 .site-main article {
   position: relative;
-  margin-top: 48px;
+  margin-top: 24px;
 }
 .blogroll {
   margin-bottom: 48px;
   padding-bottom: 48px;
-  border-bottom: 2px solid #eee;
+  border-bottom: 1px solid #eee;
 }
 .widget .blogroll {
   border-bottom: none;
 }
 .entry-meta {
   color: #bbb;
-  margin-top: -12px;
-  margin-bottom: 12px;
-  font-size: 14px;
-  text-transform: uppercase;
+  margin-bottom: 24px;
+  font-size: 13px;
 }
 .entry-meta span {
   margin-right: 6px;
@@ -156,11 +147,11 @@ footer.entry-meta {
 .entry-meta a:focus,
 .entry-meta a:active {
   text-decoration: none;
-  color: #ffffff;
+  color: #bbb;
 }
 .entry-meta a:hover {
   text-decoration: underline;
-  color: #ffffff;
+  color: #ccc;
 }
 tt,
 var {
@@ -199,7 +190,6 @@ big {
 }
 .more-tag a {
   text-transform: uppercase;
-  color: #ffffff;
 }
 /* Text meant only for screen readers */
 .screen-reader-text {
@@ -375,29 +365,6 @@ iframe,
 object {
   max-width: 100%;
 }
-/* Jetpack share buttons styling */
-div.sharedaddy div.sd-block {
-  border: none !important;
-  padding-top: 24px !important;
-}
-div.sharedaddy h3 {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-  font-size: 14px !important;
-  font-weight: normal !important;
-  text-transform: uppercase !important;
-  color: #bbb;
-  width: auto !important;
-  margin: 6px 12px 12px 0 !important;
-}
-div.sharedaddy .sd-content {
-  float: left !important;
-  width: auto !important;
-}
-div.sharedaddy a.sd-button {
-  font-size: 14px !important;
-  padding: 3px 5px !important;
-  border-radius: 0 !important;
-}
 /* =Comments
 ----------------------------------------------- */
 .comment-list,
@@ -448,17 +415,17 @@ div.sharedaddy a.sd-button {
 .comment-metadata {
   clear: both;
   font-size: 12px;
-  color: #ffffff;
+  color: #b1b1b1;
 }
 .comment-metadata a {
-  color: #ffffff;
+  color: #b1b1b1;
   text-decoration: none;
   margin-right: 12px;
 }
 .comment-list .comment-body p {
   margin-top: 12px;
   margin-bottom: 12px;
-  color: #ffffff;
+  color: #323232;
   clear: both;
 }
 ol.comment-list {
@@ -493,13 +460,13 @@ ol.comment-list {
   text-transform: uppercase;
 }
 #commentform {
-  border: #ffffff 1px solid;
+  border: #bebebe 1px solid;
   padding: 24px 24px 12px 24px;
   margin-bottom: 24px;
 }
 #commentform label {
   text-transform: uppercase;
-  color: #ffffff;
+  color: #252525;
 }
 #commentform textarea {
   height: 120px;
@@ -508,8 +475,8 @@ ol.comment-list {
 input[type="text"],
 input[type="email"],
 textarea {
-  border: 1px solid #ffffff;
-  color: #ffffff;
+  border: 1px solid #bebebe;
+  color: #585858;
   display: block;
   width: 100%;
   outline: none;
@@ -534,24 +501,19 @@ input[type="submit"]:hover {
 }
 /* =Widgets
 ----------------------------------------------- */
+#primary-sidebar {
+  padding: 32px 0;
+}
 #above-footer {
-  max-width: 1344px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
 }
 #secondary {
-  background: #ffffff;
-  color: #ffffff;
   padding: 24px 0;
-}
-#secondary .container {
-  max-width: 1344px;
-  margin-left: auto;
-  margin-right: auto;
 }
 .widget {
   margin: 0 0 48px;
-  font-weight: 300;
 }
 /* Make sure select elements fit in widgets */
 .widget select {
@@ -568,20 +530,13 @@ input[type="submit"]:hover {
 }
 .widget ul li {
   margin-bottom: 12px;
-  color: #ffffff;
-}
-#secondary .widget a {
-  color: #ffffff;
-}
-#secondary .widget a:hover {
-  color: #ffffff;
 }
 .widget-title {
   text-transform: uppercase;
   font-size: 18px;
-  margin-bottom: 24px;
-  color: #ffffff;
-  font-weight: 400;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eee;
+  color: #474747;
 }
 .widget-title a {
   color: inherit;
@@ -657,7 +612,7 @@ input[type="submit"]:hover {
   display: inline-block;
   position: relative;
   margin-right: 2px;
-  background: #ffffff;
+  background: #181818;
   color: #ffffff !important;
   font-size: 18px;
   height: 40px;
@@ -667,7 +622,7 @@ input[type="submit"]:hover {
   -webkit-transition: all 0.5s ease;
 }
 .widget_developr_social a:hover {
-  background: #ffffff;
+  background: #1d1d1d;
   color: #fff !important;
   top: -2px;
 }
@@ -735,12 +690,12 @@ input[type="submit"]:hover {
   padding: 4rem 0;
   font-size: 1.3rem;
   line-height: 1.7em;
-  color: #ffffff;
+  color: #7e7e7e;
   text-align: center;
   background: #ffffff;
 }
 .site-footer a {
-  color: #ffffff;
+  color: #989898;
 }
 a.back-to-top {
   width: 28px;
@@ -769,20 +724,19 @@ a.back-to-top {
 }
 .post-navigation a {
   width: 100%;
-  color: #ffffff;
+  color: #585858;
   font-size: 16px;
   position: relative;
   min-height: 77px;
   display: block;
   padding: 16px 46px 24px;
-  font-weight: 300;
 }
 .post-navigation a:hover {
   text-decoration: none;
-  color: #ffffff;
+  color: #323232;
 }
 .post-navigation .fa {
-  color: #ffffff;
+  color: #7e7e7e;
   font-size: 18px;
   position: absolute;
   top: 50%;

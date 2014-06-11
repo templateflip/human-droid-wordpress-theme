@@ -25,19 +25,11 @@ and Blueprint http://www.blueprintcss.org/
 /* =Global
 ----------------------------------------------- */
 
-@background-color: #fff;
+@dark-color: #181818;
 @link-color: #2ab9b3;
 @content-background: #fff;
 @padding: 24px;
-@content-width: 960px;
-
-
-/* mix-in */
-.full-width {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-}
+@content-width: 1000px;
 
 .maxed-width {
     max-width: @content-width;
@@ -45,16 +37,7 @@ and Blueprint http://www.blueprintcss.org/
     margin-right: auto;
 }
 
-.maxed-width2 {
-    max-width: 1.4 * @content-width;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
 /* Bootstrap Style overrides */
-
-
 body, table {
     line-height: 1.685;
 }
@@ -82,6 +65,14 @@ a:hover, a:focus {
   color: lighten(@link-color, 10%);
 }
 
+#content.col-md-8, #content.col-sm-8 {
+    width: 71%;
+}
+    
+#sidebar-content.col-md-4, #sidebar-content.col-sm-4 {
+    width: 29%;
+}
+
 
 .container {
     .maxed-width;
@@ -89,7 +80,6 @@ a:hover, a:focus {
 
 .content-area {
     background: @content-background;
-    .full-width
 }
 
 /*header */
@@ -122,18 +112,17 @@ font-weight: 300;
 /* Article styling */
 .site-content {
     background: @content-background;
-    padding-top: @padding;
 }
 
 .site-main article {
      position: relative;
-     margin-top: 2 * @padding;
+     margin-top: @padding;
 }
 
 .blogroll {
      margin-bottom:  2 * @padding;
      padding-bottom:  2 * @padding;
-     border-bottom: 2px solid #eee;
+     border-bottom: 1px solid #eee;
 }
 .widget .blogroll {
   border-bottom: none;
@@ -141,10 +130,8 @@ font-weight: 300;
 
 .entry-meta {
     color: #bbb;
-    margin-top: -0.5 * @padding;
-    margin-bottom: @padding / 2;
-    font-size: 14px;
-    text-transform: uppercase;
+    margin-bottom: @padding;
+    font-size: 13px;
 }
 
 .entry-meta span {
@@ -165,12 +152,12 @@ footer.entry-meta {
 .entry-meta a:focus,
 .entry-meta a:active {
     text-decoration: none;
-    color: lighten(@background-color, 55%);
+    color: #bbb;
 }
 
 .entry-meta a:hover {
     text-decoration: underline;
-    color: lighten(@background-color, 35%);
+    color: #ccc;
 }
 
 tt, var {
@@ -205,7 +192,6 @@ display: block;
 
 .more-tag a {
     text-transform: uppercase;
-    color: lighten(@background-color, 35%);
 }
 
 /* Text meant only for screen readers */
@@ -378,33 +364,6 @@ object {
 	max-width: 100%;
 }
 
-/* Jetpack share buttons styling */
-div.sharedaddy div.sd-block {
-    border: none !important;
-    padding-top: 24px !important;
-}
-
-div.sharedaddy h3 {
-    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif !important;
-    font-size: 14px !important;
-    font-weight: normal !important;
-    text-transform: uppercase !important;
-    color: #bbb;
-    width: auto !important;
-    margin:  6px 12px 12px 0 !important;
-}
-
-div.sharedaddy .sd-content {
-    float: left !important;
-    width: auto !important;
-}
-
-div.sharedaddy a.sd-button {
-    font-size: 14px !important;
-    padding: 3px 5px !important;
-    border-radius: 0 !important;
-}
-
 /* =Comments
 ----------------------------------------------- */
 .comment-list, .comment-list .children {
@@ -465,11 +424,11 @@ top: 0;
 .comment-metadata {
     clear: both;
     font-size: 12px;    
-    color: lighten(@background-color, 60%);
+    color: lighten(@dark-color, 60%);
 }
 
 .comment-metadata a {
-    color: lighten(@background-color, 60%);
+    color: lighten(@dark-color, 60%);
     text-decoration: none;
     margin-right: @padding / 2;
 }
@@ -477,7 +436,7 @@ top: 0;
 .comment-list .comment-body p {
 margin-top: @padding / 2;
 margin-bottom: @padding / 2;
-color: lighten(@background-color, 10%);
+color: lighten(@dark-color, 10%);
 clear: both;
 }
 
@@ -520,14 +479,14 @@ ol.comment-list {
 }
 
 #commentform {
-border: lighten(@background-color, 65%) 1px solid;
+border: lighten(@dark-color, 65%) 1px solid;
 padding: @padding @padding @padding / 2 @padding;
 margin-bottom: @padding;
 }
 
 #commentform label {
     text-transform: uppercase;
-    color: lighten(@background-color, 5%);
+    color: lighten(@dark-color, 5%);
 }
 
 
@@ -538,8 +497,8 @@ height: 120px;
 /* Input Styling */
 
 input[type="text"], input[type="email"], textarea {
-    border: 1px solid lighten(@background-color, 65%);
-    color: lighten(@background-color, 25%);
+    border: 1px solid lighten(@dark-color, 65%);
+    color: lighten(@dark-color, 25%);
     display: block;
     width: 100%;
     outline: none;
@@ -568,23 +527,21 @@ input[type="submit"]:hover {
 /* =Widgets
 ----------------------------------------------- */
 
+#primary-sidebar {
+    padding: 32px 0;
+}
+
 #above-footer {
-    .maxed-width2;
+    .maxed-width;
 }
 
 #secondary {
-    background: lighten(@background-color, 5%);
-    color: lighten(@background-color, 50%);
     padding: @padding 0;
 }
 
-#secondary .container {
-    .maxed-width2;
-}
 
 .widget {
 	margin: 0 0 2 * @padding;
-    font-weight: 300;
 }
 
 /* Make sure select elements fit in widgets */
@@ -605,23 +562,20 @@ input[type="submit"]:hover {
 
 .widget ul li {
     margin-bottom: @padding / 2;
-    color: lighten(@background-color, 50%);
 }
 
 #secondary .widget a {
-    color: lighten(@background-color, 60%);
 }
 
 #secondary .widget a:hover {
-    color: lighten(@background-color, 70%);
 }
 
 .widget-title {
     text-transform: uppercase;
     font-size: 18px;
-    margin-bottom: @padding;
-    color: lighten(@background-color, 60%);
-    font-weight: 400;
+    padding-bottom: @padding / 2;
+    border-bottom: 1px solid #eee;
+    color:  #474747;
 }
 
 .widget-title a {
@@ -666,8 +620,8 @@ font-size: 18px;
     display: inline-block;
     position: relative;
     margin-right: 2px;
-    background: @background-color;
-    color: lighten(@background-color, 95%) !important;
+    background: @dark-color;
+    color: lighten(@dark-color, 95%) !important;
     font-size: 18px;
     height: 40px;
     width: 40px;
@@ -677,7 +631,7 @@ font-size: 18px;
 }
 
 .widget_developr_social a:hover {
-    background: lighten(@background-color, 2%);
+    background: lighten(@dark-color, 2%);
     color: #fff !important;
     top: -2px;
 }
@@ -710,13 +664,13 @@ font-size: 18px;
     padding: 4rem 0;
     font-size: 1.3rem;
     line-height: 1.7em;
-    color: lighten(@background-color, 40%);
+    color: lighten(@dark-color, 40%);
     text-align: center;
     background: @content-background;
 }
 
 .site-footer a {
-    color: lighten(@background-color, 50%);
+    color: lighten(@dark-color, 50%);
 }
 
 a.back-to-top {
@@ -749,21 +703,20 @@ color: #222;
 
 .post-navigation a {
     width: 100%;
-    color: lighten(@background-color, 25%);
+    color: lighten(@dark-color, 25%);
     font-size: 16px;
     position: relative;
     min-height: 77px;
     display: block;
     padding: 16px 46px 24px;
-    font-weight: 300;
 }
 .post-navigation a:hover {
     text-decoration: none;
-    color: lighten(@background-color, 10%);
+    color: lighten(@dark-color, 10%);
 }
 
 .post-navigation .fa {
-    color: lighten(@background-color, 40%);
+    color: lighten(@dark-color, 40%);
     font-size: 18px;
     position: absolute;
     top: 50%;
