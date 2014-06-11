@@ -122,14 +122,14 @@ font-weight: 300;
 .blogroll {
      margin-bottom:  2 * @padding;
      padding-bottom:  2 * @padding;
-     border-bottom: 1px solid #eee;
+     border-bottom: 1px dotted #e5e5e5;
 }
 .widget .blogroll {
   border-bottom: none;
 }
 
 .entry-meta {
-    color: #bbb;
+    color: #999;
     margin-bottom: @padding;
     font-size: 13px;
 }
@@ -152,7 +152,7 @@ footer.entry-meta {
 .entry-meta a:focus,
 .entry-meta a:active {
     text-decoration: none;
-    color: #bbb;
+    color: #999;
 }
 
 .entry-meta a:hover {
@@ -479,7 +479,7 @@ ol.comment-list {
 }
 
 #commentform {
-border: lighten(@dark-color, 65%) 1px solid;
+border: 1px solid #e5e5e5;
 padding: @padding @padding @padding / 2 @padding;
 margin-bottom: @padding;
 }
@@ -497,7 +497,7 @@ height: 120px;
 /* Input Styling */
 
 input[type="text"], input[type="email"], textarea {
-    border: 1px solid lighten(@dark-color, 65%);
+    border: 1px solid #e5e5e5;
     color: lighten(@dark-color, 25%);
     display: block;
     width: 100%;
@@ -574,7 +574,7 @@ input[type="submit"]:hover {
     text-transform: uppercase;
     font-size: 18px;
     padding-bottom: @padding / 2;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #e5e5e5;
     color:  #474747;
 }
 
@@ -667,6 +667,7 @@ font-size: 18px;
     color: lighten(@dark-color, 40%);
     text-align: center;
     background: @content-background;
+    border-top: 1px dotted #e5e5e5;
 }
 
 .site-footer a {
@@ -683,10 +684,11 @@ margin-left: -15px;
 text-align: center;
 line-height: 2.6rem;
 border-radius: 50px;
-background:  #eee;
+background:  #e5e5e5;
 transition: box-shadow 0.5s;
 text-decoration: none;
-color: #222;
+font-weight: 700;
+color: #999;
 }
 
 .widget-area {
@@ -696,14 +698,13 @@ color: #222;
 
 /* Post navs */
 .post-navigation {
-    border-top: 2px solid #e5e5e5;
-    border-bottom: 2px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
     margin-bottom: 40px;
 }
 
 .post-navigation a {
     width: 100%;
-    color: lighten(@dark-color, 25%);
     font-size: 16px;
     position: relative;
     min-height: 77px;
@@ -712,11 +713,10 @@ color: #222;
 }
 .post-navigation a:hover {
     text-decoration: none;
-    color: lighten(@dark-color, 10%);
 }
 
 .post-navigation .fa {
-    color: lighten(@dark-color, 40%);
+    color: #e5e5e5;
     font-size: 18px;
     position: absolute;
     top: 50%;
@@ -726,7 +726,7 @@ color: #222;
 .post-navigation strong {
 display: block;
 font-size: 13px;
-color: #bbb;
+color: #999;
 letter-spacing: 0.5px;
 font-weight: normal;
 text-transform: uppercase;
@@ -759,8 +759,7 @@ text-transform: uppercase;
 /* ------------------------------------ */
 
 .paging-navigation {
-    border-bottom: #eee 2px solid;
-    padding-bottom: 2 * @padding;
+    padding-bottom: @padding;
 }
 
 

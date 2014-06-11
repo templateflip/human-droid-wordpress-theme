@@ -121,13 +121,13 @@ a:focus {
 .blogroll {
   margin-bottom: 48px;
   padding-bottom: 48px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px dotted #e5e5e5;
 }
 .widget .blogroll {
   border-bottom: none;
 }
 .entry-meta {
-  color: #bbb;
+  color: #999;
   margin-bottom: 24px;
   font-size: 13px;
 }
@@ -147,7 +147,7 @@ footer.entry-meta {
 .entry-meta a:focus,
 .entry-meta a:active {
   text-decoration: none;
-  color: #bbb;
+  color: #999;
 }
 .entry-meta a:hover {
   text-decoration: underline;
@@ -460,7 +460,7 @@ ol.comment-list {
   text-transform: uppercase;
 }
 #commentform {
-  border: #bebebe 1px solid;
+  border: 1px solid #e5e5e5;
   padding: 24px 24px 12px 24px;
   margin-bottom: 24px;
 }
@@ -475,7 +475,7 @@ ol.comment-list {
 input[type="text"],
 input[type="email"],
 textarea {
-  border: 1px solid #bebebe;
+  border: 1px solid #e5e5e5;
   color: #585858;
   display: block;
   width: 100%;
@@ -535,7 +535,7 @@ input[type="submit"]:hover {
   text-transform: uppercase;
   font-size: 18px;
   padding-bottom: 12px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #e5e5e5;
   color: #474747;
 }
 .widget-title a {
@@ -693,6 +693,7 @@ input[type="submit"]:hover {
   color: #7e7e7e;
   text-align: center;
   background: #ffffff;
+  border-top: 1px dotted #e5e5e5;
 }
 .site-footer a {
   color: #989898;
@@ -707,10 +708,11 @@ a.back-to-top {
   text-align: center;
   line-height: 2.6rem;
   border-radius: 50px;
-  background: #eee;
+  background: #e5e5e5;
   transition: box-shadow 0.5s;
   text-decoration: none;
-  color: #222;
+  font-weight: 700;
+  color: #999;
 }
 .widget-area {
   clear: both;
@@ -718,13 +720,12 @@ a.back-to-top {
 }
 /* Post navs */
 .post-navigation {
-  border-top: 2px solid #e5e5e5;
-  border-bottom: 2px solid #e5e5e5;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
   margin-bottom: 40px;
 }
 .post-navigation a {
   width: 100%;
-  color: #585858;
   font-size: 16px;
   position: relative;
   min-height: 77px;
@@ -733,10 +734,9 @@ a.back-to-top {
 }
 .post-navigation a:hover {
   text-decoration: none;
-  color: #323232;
 }
 .post-navigation .fa {
-  color: #7e7e7e;
+  color: #e5e5e5;
   font-size: 18px;
   position: absolute;
   top: 50%;
@@ -745,7 +745,7 @@ a.back-to-top {
 .post-navigation strong {
   display: block;
   font-size: 13px;
-  color: #bbb;
+  color: #999;
   letter-spacing: 0.5px;
   font-weight: normal;
   text-transform: uppercase;
@@ -771,8 +771,7 @@ a.back-to-top {
 /*  common : nav
 /* ------------------------------------ */
 .paging-navigation {
-  border-bottom: #eee 2px solid;
-  padding-bottom: 48px;
+  padding-bottom: 24px;
 }
 /* =Infinite Scroll
 ----------------------------------------------- */

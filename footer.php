@@ -11,7 +11,6 @@
 	
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-        <a class="back-to-top" href="#">&uarr;</a>
         <div class="container">
             <div id="copyright">
                 <?php if ( ot_get_option( 'copyright' ) ): ?>
