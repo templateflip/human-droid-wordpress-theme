@@ -116,6 +116,14 @@ a:focus {
   font-weight: 400;
   margin-bottom: 0;
 }
+.site-title a {
+  color: #2ab9b3;
+  font-weight: 300;
+}
+.site-description {
+  font-weight: 300;
+  color: #4a4a4a;
+}
 /* Article styling */
 .site-content {
   background: #ffffff;
@@ -174,8 +182,9 @@ acronym {
 ins {
   text-decoration: none;
 }
-big {
-  font-size: 125%;
+big,
+.big {
+  font-size: 135%;
 }
 .left,
 .alignleft {
@@ -517,9 +526,6 @@ input[type="submit"]:hover {
   max-width: 960px;
   margin-left: auto;
   margin-right: auto;
-}
-#secondary {
-  padding: 24px 0;
 }
 .widget {
   margin: 0 0 48px;
