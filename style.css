@@ -27,7 +27,7 @@ and Blueprint http://www.blueprintcss.org/
   line-height: 1.25;
 }
 .maxed-width {
-  max-width: 1000px;
+  max-width: 960px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -35,6 +35,7 @@ and Blueprint http://www.blueprintcss.org/
 body,
 table {
   line-height: 1.685;
+  color: #3a3a3a;
 }
 h1,
 .h1,
@@ -91,7 +92,7 @@ a:focus {
   width: 29%;
 }
 .container {
-  max-width: 1000px;
+  max-width: 960px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -517,7 +518,7 @@ input[type="submit"]:hover {
   padding: 32px 0;
 }
 #above-footer {
-  max-width: 1000px;
+  max-width: 960px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -526,6 +527,8 @@ input[type="submit"]:hover {
 }
 .widget {
   margin: 0 0 48px;
+  font-size: 14px;
+  color: #bbb;
 }
 /* Make sure select elements fit in widgets */
 .widget select {
@@ -542,6 +545,13 @@ input[type="submit"]:hover {
 }
 .widget ul li {
   margin-bottom: 12px;
+}
+#primary-sidebar .widget a {
+  color: #4d4d4d;
+  text-decoration: none;
+}
+#primary-sidebar .widget a:hover {
+  color: #009999;
 }
 .widget-title {
   text-transform: uppercase;
@@ -645,12 +655,11 @@ input[type="submit"]:hover {
 /*  plugin : wp-pagenavi
 /* ------------------------------------ */
 .wp-pagenavi {
-  text-align: right;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 20px;
   float: none;
-  margin-right: -2px;
-  text-align: center;
+  margin-left: -6px;
+  text-align: left;
 }
 .wp-pagenavi a,
 .wp-pagenavi span {
@@ -658,7 +667,7 @@ input[type="submit"]:hover {
   font-size: 16px;
   padding: 7px 8px!important;
   display: inline;
-  margin: 0 2px!important;
+  margin: 0 6px!important;
 }
 .wp-pagenavi span.pages {
   font-size: 17px;
@@ -674,27 +683,25 @@ input[type="submit"]:hover {
 }
 .wp-pagenavi span.extend {
   border: none!important;
-  border-bottom: 3px solid transparent!important;
-  border-top: 1px solid transparent!important;
+  border: 1px solid transparent!important;
 }
 .wp-pagenavi a:hover,
 .wp-pagenavi a:active,
 .wp-pagenavi span.current {
-  color: #444!important;
+  color: #fff!important;
+  font-weight: normal!important;
 }
 .wp-pagenavi a {
   color: #009999;
   border: none!important;
-  border-bottom: 3px solid #ddd!important;
-  border-top: 1px solid #f1f1f1!important;
+  border: 1px solid #009999 !important;
 }
 .wp-pagenavi a:hover,
 .wp-pagenavi a:active,
 .wp-pagenavi span.current {
-  background: none;
+  background: #009999;
   border: none!important;
-  border-bottom: 3px solid #009999 !important;
-  border-top: 1px solid #f1f1f1!important;
+  border: 1px solid #009999 !important;
 }
 /* Footer */
 .site-footer {
