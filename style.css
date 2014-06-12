@@ -83,14 +83,6 @@ a:hover,
 a:focus {
   color: #00cccc;
 }
-#content.col-md-8,
-#content.col-sm-8 {
-  width: 71%;
-}
-#sidebar-content.col-md-4,
-#sidebar-content.col-sm-4 {
-  width: 29%;
-}
 .container {
   max-width: 960px;
   margin-left: auto;
@@ -826,7 +818,14 @@ a.back-to-top {
   display: block;
 }
 @media only screen and (min-width: 768px) {
-  
+  #content.col-md-8,
+  #content.col-sm-8 {
+    width: 71%;
+  }
+  #sidebar-content.col-md-4,
+  #sidebar-content.col-sm-4 {
+    width: 29%;
+  }
 }
 @media only screen and (max-width: 767px) {
   .container {
@@ -835,9 +834,21 @@ a.back-to-top {
   }
   body,
   table {
-    font-size: 15px;
+    font-size: 14px;
   }
   .site-description {
     font-size: 18px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  h3 {
+    font-size: 19px;
+  }
+  h4 {
+    font-size: 17px;
   }
 }

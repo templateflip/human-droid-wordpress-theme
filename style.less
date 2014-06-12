@@ -73,15 +73,6 @@ a:hover, a:focus {
   color: lighten(@link-color, 10%);
 }
 
-#content.col-md-8, #content.col-sm-8 {
-    width: 71%;
-}
-    
-#sidebar-content.col-md-4, #sidebar-content.col-sm-4 {
-    width: 29%;
-}
-
-
 .container {
     .maxed-width;
 }
@@ -814,7 +805,13 @@ text-transform: uppercase;
 }
 
 @media only screen and (min-width: 768px) {
-	
+	#content.col-md-8, #content.col-sm-8 {
+        width: 71%;
+    }
+    
+    #sidebar-content.col-md-4, #sidebar-content.col-sm-4 {
+        width: 29%;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -824,10 +821,26 @@ text-transform: uppercase;
     }
 
     body, table {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .site-description {
         font-size: 18px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 19px;
+    }
+
+    h4 {
+        font-size: 17px;
     }
 }
