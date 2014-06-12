@@ -75,6 +75,9 @@ h6 a:focus {
 p {
   margin: 0 0 24px;
 }
+hr {
+  border-top: 1px dotted #dddddd;
+}
 a,
 .link {
   color: #009999;
@@ -92,6 +95,11 @@ a:focus {
   background: #ffffff;
 }
 /*header */
+#masthead {
+  position: relative;
+  padding: 36px 0 48px;
+  background: #f6f6f6;
+}
 .brand-text-h1 {
   color: #eee;
   margin: 0;
@@ -117,12 +125,51 @@ a:focus {
   margin-bottom: 0;
 }
 .site-title a {
-  color: #2ab9b3;
+  color: #424242;
   font-weight: 300;
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
 .site-description {
+  font-size: 30px;
   font-weight: 300;
-  color: #4a4a4a;
+  color: #999;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.social-flare-container {
+  bottom: -20px;
+  height: 40px;
+  margin: 0 auto;
+  position: absolute;
+  width: 100%;
+  display: block;
+}
+.social-flare {
+  display: block;
+  position: relative;
+  font-size: 18px;
+  height: 40px;
+  line-height: 40px;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+}
+.social-flare a {
+  display: inline-block;
+  background: #ccc;
+  color: #fff;
+  font-size: 18px;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  text-align: center;
+}
+.social-flare a:hover {
+  background: #ddd;
+  color: #fff;
 }
 /* Article styling */
 .site-content {
@@ -841,6 +888,9 @@ a.back-to-top {
   body,
   table {
     font-size: 14px;
+  }
+  .site-title {
+    font-size: 32px;
   }
   .site-description {
     font-size: 18px;

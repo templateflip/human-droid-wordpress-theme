@@ -78,7 +78,7 @@
 			    if ( ! empty( $header_image ) ) :
 		        ?>
 			        <a class="site-logo"  href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-				        <img src="<?php echo $header_image; ?>" alt="Gravatar" class="<?php echo $header_class; ?>" width="120" height="120" />
+				        <img src="<?php echo $header_image; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" class="<?php echo $header_class; ?>" width="120" height="120" />
 			        </a>
 		        <?php endif; ?>
 		        <div class="site-branding text-center">
@@ -86,6 +86,11 @@
 			            <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
                         <?php if ( !ot_get_option('site-description') ): ?><h2 class="site-description"><?php bloginfo( 'description' ); ?></h2><?php endif; ?>
 		        </div>
+            </div>
+            <div class="social-flare-container">
+                <div class="social-flare">	
+        			<?php developr_social_links() ?>
+                </div>
             </div>
 	    </header><!-- #masthead -->
     <?php endif; ?>

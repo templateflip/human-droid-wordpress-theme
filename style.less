@@ -65,6 +65,10 @@ p {
     margin: 0 0 @padding;
 }
 
+hr {
+    border-top: 1px dotted #dddddd;
+}
+
 a,
 .link {
   color: @link-color;
@@ -83,6 +87,9 @@ a:hover, a:focus {
 
 /*header */
 #masthead {
+    position: relative;
+    padding: 1.5 * @padding 0 2 * @padding;
+    background: #f6f6f6;
 }
 
 .brand-text-h1 {
@@ -110,11 +117,54 @@ font-weight: 300;
     font-weight: 400;
     margin-bottom: 0;
 }.site-title a {
-     color: #2ab9b3;
+    color: #424242;
     font-weight: 300;
+    margin-top: @padding / 2;
+    margin-bottom: @padding / 2;
 }.site-description {
+    font-size: 30px;
     font-weight: 300;
-    color: #4a4a4a;
+    color: #999;
+    margin-top: @padding / 2;
+    margin-bottom: @padding / 2;
+}
+
+.social-flare-container {
+bottom: -20px;
+height: 40px;
+margin: 0 auto;
+position: absolute;
+width: 100%;
+display: block;
+}
+
+.social-flare {
+display: block;
+position: relative;
+font-size: 18px;
+height: 40px;
+line-height: 40px;
+margin: auto;
+width: 100%;
+text-align: center;
+}
+
+.social-flare a {
+display: inline-block;
+background: #ccc;
+color: #fff;
+font-size: 18px;
+height: 40px;
+width: 40px;
+line-height: 40px;
+-webkit-border-radius: 100%;
+border-radius: 100%;
+text-align: center;
+}
+
+.social-flare a:hover {
+background: #ddd;
+color: #fff;
 }
 /* Article styling */
 .site-content {
@@ -829,6 +879,10 @@ text-transform: uppercase;
 
     body, table {
         font-size: 14px;
+    }
+
+    .site-title {
+        font-size: 32px;
     }
 
     .site-description {
