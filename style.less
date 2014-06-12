@@ -145,6 +145,11 @@ font-weight: 300;
     margin-right: 6px;
 }
 
+.entry-meta .fa {
+    margin-right: 6px;
+    margin-left: 2px;
+}
+
 .entry-meta .posted-on, .entry-meta .label {
     margin-left: 2px;
     margin-right: 0px;
@@ -674,17 +679,17 @@ font-size: 18px;
 .site-footer {
     position: relative;
     margin: 0;
-    padding: 4rem 0;
+    padding: 2rem 0;
     font-size: 1.3rem;
     line-height: 1.7em;
-    color: lighten(@dark-color, 40%);
+    color: #777;
     text-align: center;
     background: @content-background;
     border-top: 1px dotted #e5e5e5;
 }
 
 .site-footer a {
-    color: lighten(@dark-color, 50%);
+    color: #a2a2a2;
 }
 
 a.back-to-top {
@@ -704,6 +709,24 @@ font-weight: 700;
 color: #999;
 }
 
+/* Footer menu */
+.footer-menu {
+    text-align: center;
+}
+
+.footer-menu ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.footer-menu ul li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
 .widget-area {
     clear: both;
     margin: 0;
@@ -711,14 +734,14 @@ color: #999;
 
 /* Post navs */
 .post-navigation {
-    border-top: 1px solid #e5e5e5;
-    border-bottom: 1px solid #e5e5e5;
+    border-top: 1px dotted #e5e5e5;
+    border-bottom: 1px dotted #e5e5e5;
     margin-bottom: 40px;
 }
 
 .post-navigation a {
     width: 100%;
-    font-size: 16px;
+    font-size: 14px;
     position: relative;
     min-height: 77px;
     display: block;

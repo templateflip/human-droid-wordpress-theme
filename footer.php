@@ -12,6 +12,16 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
         <div class="container">
+            <?php 
+                wp_nav_menu( array(
+                    'menu'              => 'footer',
+                    'theme_location'    => 'footer',
+                    'depth'             => 1,
+                    'container'         => 'div',
+                    'container_class'   => 'footer-menu')
+                );
+            ?>
+            <div class="clear"></div>
             <div id="copyright">
                 <?php if ( ot_get_option( 'copyright' ) ): ?>
 					<?php echo ot_get_option( 'copyright' ); ?>
