@@ -1,9 +1,9 @@
-Publishr
+HumanDroid
 ===
 
-Publishr is a classy WordPress theme built with bootstrap. It’s most suitable for blogs and websites of developers who want to make use of bootstrap css for custom designing their pages and posts. However, it is designed to be used by anyone without learning about bootstrap.
+HumanDroid is a classy WordPress theme built with bootstrap. It’s most suitable for blogs and websites of developers who want to make use of bootstrap css for custom designing their pages and posts. However, it is designed to be used by anyone without learning about bootstrap.
 
-Publishr is a responsive theme with the awesomeness of Font Awesome built right into it.
+HumanDroid is a responsive theme with the awesomeness of Font Awesome built right into it.
 
 You are free to use this theme as base and design your own themes. This theme, like WordPress, is licensed under the GPL. Use it to make something cool, have fun, and share what you’ve learned with others.
 

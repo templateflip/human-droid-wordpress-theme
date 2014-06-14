@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package Publishr
+ * @package HumanDroid
  */
 
 if ( ! function_exists( 'developr_paging_nav' ) ) :
@@ -22,18 +22,18 @@ function developr_paging_nav() {
 	}
 	?>
 	<nav class="navigation paging-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'publishr' ); ?></h1>
+		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'human-droid' ); ?></h1>
         <?php if ( function_exists('wp_pagenavi') ): ?>
 		    <?php wp_pagenavi(); ?>
 	    <?php else: ?>
 		<div class="nav-links pager">
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'publishr' ) ); ?></div>
+			<div class="nav-previous previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'human-droid' ) ); ?></div>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'publishr' ) ); ?></div>
+			<div class="nav-next next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'human-droid' ) ); ?></div>
 			<?php endif; ?>
 
 		</div><!-- .nav-links -->
@@ -59,11 +59,11 @@ function developr_post_nav() {
 	}
 	?>
 	<nav class="navigation post-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'publishr' ); ?></h1>
+		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'human-droid' ); ?></h1>
 		<div class="nav-links row">
 			<?php
-				previous_post_link( '<div class="col-sm-6"><div class="nav-previous">%link</div></div>', _x( '<span class="meta-nav"><i class="fa fa-chevron-left"></i><strong>'.__('Previous', 'publishr').'</strong> </span> %title', 'Previous post link', 'publishr' ) );
-				next_post_link(     '<div class="col-sm-6"><div class="nav-next">%link</div></div>',     _x( '<strong>'.__('Next', 'publishr').'</strong> %title <span class="meta-nav"><i class="fa fa-chevron-right"></i></span>', 'Next post link',     'publishr' ) );
+				previous_post_link( '<div class="col-sm-6"><div class="nav-previous">%link</div></div>', _x( '<span class="meta-nav"><i class="fa fa-chevron-left"></i><strong>'.__('Previous', 'human-droid').'</strong> </span> %title', 'Previous post link', 'human-droid' ) );
+				next_post_link(     '<div class="col-sm-6"><div class="nav-next">%link</div></div>',     _x( '<strong>'.__('Next', 'human-droid').'</strong> %title <span class="meta-nav"><i class="fa fa-chevron-right"></i></span>', 'Next post link',     'human-droid' ) );
 			?>
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
@@ -84,7 +84,7 @@ function developr_comment( $comment, $args, $depth ) {
 
 	<li id="comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
 		<div class="comment-body">
-			<?php _e( 'Pingback:', 'publishr' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'publishr' ), '<span class="edit-link">', '</span>' ); ?>
+			<?php _e( 'Pingback:', 'human-droid' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'human-droid' ), '<span class="edit-link">', '</span>' ); ?>
 		</div>
 
 	<?php else : ?>
@@ -94,21 +94,21 @@ function developr_comment( $comment, $args, $depth ) {
 			<footer class="comment-meta">
 				<div class="comment-author vcard">
 					<?php if ( 0 != $args['avatar_size'] ) { echo get_avatar( $comment, $args['avatar_size'] ); } ?>
-					<?php printf( __( '%s ', 'publishr' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+					<?php printf( __( '%s ', 'human-droid' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
 				</div><!-- .comment-author -->
 
 				<div class="comment-metadata">
 					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
                         <i class="fa fa-clock-o"></i> 
 						<time datetime="<?php comment_time( 'c' ); ?>">
-							<?php printf( _x( '%1$s at %2$s', '1: date, 2: time', 'publishr' ), get_comment_date(), get_comment_time() ); ?>
+							<?php printf( _x( '%1$s at %2$s', '1: date, 2: time', 'human-droid' ), get_comment_date(), get_comment_time() ); ?>
 						</time>
 					</a>
-					<?php edit_comment_link( __( 'Edit', 'publishr' ), '<span class="edit-link">', '</span>' ); ?>
+					<?php edit_comment_link( __( 'Edit', 'human-droid' ), '<span class="edit-link">', '</span>' ); ?>
 				</div><!-- .comment-metadata -->
 
 				<?php if ( '0' == $comment->comment_approved ) : ?>
-				<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'publishr' ); ?></p>
+				<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'human-droid' ); ?></p>
 				<?php endif; ?>
 			</footer><!-- .comment-meta -->
 
@@ -149,7 +149,7 @@ function developr_posted_on() {
 		esc_html( get_the_modified_date() )
 	);
 
-	printf( __( '<i class="fa fa-calendar"></i><span class="posted-on">%1$s</span><span class="byline"></span>', 'publishr' ),
+	printf( __( '<i class="fa fa-calendar"></i><span class="posted-on">%1$s</span><span class="byline"></span>', 'human-droid' ),
 		sprintf( '<a href="%1$s" rel="bookmark">%2$s</a>',
 			esc_url( get_permalink() ),
 			$time_string

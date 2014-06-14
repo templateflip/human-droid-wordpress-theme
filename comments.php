@@ -7,7 +7,7 @@
  * handled by a callback to developr_comment() which is
  * located in the inc/template-tags.php file.
  *
- * @package Publishr
+ * @package HumanDroid
  */
 
 /*
@@ -28,15 +28,15 @@ if ( post_password_required() ) {
 		<h4 class="comments-title">
             <strong>
                 <i class="fa fa-comments-o"></i> 
-                <?php comments_number( __( 'No Responses', 'publishr' ), __( '1 Response', 'publishr' ), __( '% Responses', 'publishr' ) ); ?>
+                <?php comments_number( __( 'No Responses', 'human-droid' ), __( '1 Response', 'human-droid' ), __( '% Responses', 'human-droid' ) ); ?>
             </strong>
 		</h4>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-above" class="comment-navigation" role="navigation">
-			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'publishr' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'publishr' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'publishr' ) ); ?></div>
+			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'human-droid' ); ?></h1>
+			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'human-droid' ) ); ?></div>
+			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'human-droid' ) ); ?></div>
 		</nav><!-- #comment-nav-above -->
 		<?php endif; // check for comment navigation ?>
 
@@ -54,9 +54,9 @@ if ( post_password_required() ) {
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-below" class="comment-navigation" role="navigation">
-			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'publishr' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'publishr' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'publishr' ) ); ?></div>
+			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'human-droid' ); ?></h1>
+			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'human-droid' ) ); ?></div>
+			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'human-droid' ) ); ?></div>
 		</nav><!-- #comment-nav-below -->
 		<?php endif; // check for comment navigation ?>
 
@@ -66,7 +66,7 @@ if ( post_password_required() ) {
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'publishr' ); ?></p>
+		<p class="no-comments"><?php _e( 'Comments are closed.', 'human-droid' ); ?></p>
 	<?php endif; ?>
     <?php comment_form(); ?>
 </div><!-- #comments -->

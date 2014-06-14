@@ -2,7 +2,7 @@
 /**
  * The Template for displaying all single posts.
  *
- * @package Publishr
+ * @package HumanDroid
  */
 
 get_header(); ?>

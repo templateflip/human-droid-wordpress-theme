@@ -1,8 +1,8 @@
 <?php
 /**
- * Publishr Theme Customizer
+ * HumanDroid Theme Customizer
  *
- * @package Publishr
+ * @package HumanDroid
  */
 
 /**

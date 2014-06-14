@@ -2,7 +2,7 @@
 /**
  * The Sidebar containing the main widget areas.
  *
- * @package Publishr
+ * @package HumanDroid
  */
 ?>
             </div><!--col-->    

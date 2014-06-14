@@ -1,10 +1,10 @@
 <?php
 /**
- * Publishr functions and definitions
+ * HumanDroid functions and definitions
  *
  * Use a child theme instead of placing custom functions here
  * http://codex.wordpress.org/Child_Themes
- * @package Publishr
+ * @package HumanDroid
  */
 
 
@@ -38,16 +38,16 @@ function developr_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on Publishr, use a find and replace
-	 * to change 'publishr' to the name of your theme in all the template files
+	 * If you're building a theme based on HumanDroid, use a find and replace
+	 * to change 'human-droid' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'publishr', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'human-droid', get_template_directory() . '/languages' );
 
     // Load theme options
     load_template( get_template_directory() . '/inc/theme-options.php' );
 
     // Load custom widgets
-    load_template( get_template_directory() . '/widgets/publishr-social.php' );
+    load_template( get_template_directory() . '/widgets/human-droid-social.php' );
 
 
     // Load dynamic styles
@@ -69,8 +69,8 @@ function developr_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'publishr' ),
-        'footer' => __( 'Footer Menu', 'publishr' )
+		'primary' => __( 'Primary Menu', 'human-droid' ),
+        'footer' => __( 'Footer Menu', 'human-droid' )
 	) );
 
 	// Enable support for Post Formats.
@@ -100,7 +100,7 @@ function developr_widgets_init() {
 	) );
 
     register_sidebar( array(
-		'name'          => __( 'Full-width Footer for ads etc.', 'publishr' ),
+		'name'          => __( 'Full-width Footer for ads etc.', 'human-droid' ),
 		'id'            => 'above-footer',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -109,7 +109,7 @@ function developr_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Footer-1', 'publishr' ),
+		'name'          => __( 'Footer-1', 'human-droid' ),
 		'id'            => 'footer-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -118,7 +118,7 @@ function developr_widgets_init() {
 	) );
 
     register_sidebar( array(
-		'name'          => __( 'Footer-2', 'publishr' ),
+		'name'          => __( 'Footer-2', 'human-droid' ),
 		'id'            => 'footer-2',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -127,7 +127,7 @@ function developr_widgets_init() {
 	) );
 
     register_sidebar( array(
-		'name'          => __( 'Footer-3', 'publishr' ),
+		'name'          => __( 'Footer-3', 'human-droid' ),
 		'id'            => 'footer-3',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -145,7 +145,7 @@ function developr_scripts() {
     //wp_enqueue_style( 'roboto-slab', '//fonts.googleapis.com/css?family=Roboto+Slab');
     wp_enqueue_style( 'bootstrap', '//netdna.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css' );
     wp_enqueue_style( 'font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' );
-	wp_enqueue_style( 'publishr-style', get_stylesheet_uri(), NULL, "0.8" );
+	wp_enqueue_style( 'human-droid-style', get_stylesheet_uri(), NULL, "0.8" );
 
     wp_enqueue_script( 'bootstrap-js', '//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js', array('jquery'), NULL, true );
     wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ),'0.8', true ); 
