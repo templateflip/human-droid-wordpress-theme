@@ -27,7 +27,7 @@ and Blueprint http://www.blueprintcss.org/
 
 @dark-color: #181818;
 @link-color: #00aba9;
-@content-background: #FFFFFF;
+@content-background: #f6f6f6;
 @padding: 24px;
 @content-width: 960px;
 .heading-font {
@@ -48,7 +48,7 @@ and Blueprint http://www.blueprintcss.org/
 
 /* Bootstrap Style overrides */
 body, table {
-    background: #ffffff;
+    background: #f6f6f6;
     line-height: 1.685;
     color: #4B453A;
     .body-font();
@@ -82,7 +82,7 @@ a,
   color: @link-color;
 }
 a:hover, a:focus {
-  color: lighten(@link-color, 10%);
+  color: lighten(@link-color, 5%);
 }
 
 .container {
@@ -121,7 +121,7 @@ a:hover, a:focus {
 
 .white-space {
     margin-top: 48px;
-    border-bottom: 1px dashed #eee;
+    border-bottom: 1px dashed #ddd;
     margin-bottom: 32px;
 }
 
@@ -296,7 +296,7 @@ color: #fff;
 
 .blogroll {
      margin-bottom:  2 * @padding;
-     border-bottom: 1px dotted #e5e5e5;
+     border-bottom: 1px dotted #ddd;
 }
 .widget .blogroll {
   border-bottom: none;
@@ -366,11 +366,19 @@ display: block;
 }
 
 .more-tag {
-    margin-top: @padding;
+    margin: 1.5*@padding 0;
 }
 
-.more-tag a {
+.more-tag .ghost-button {
+    font-size: inherit;
     text-transform: uppercase;
+    background: @link-color;
+    color:  #fff;
+}
+
+.more-tag .ghost-button:active, .more-tag .ghost-button:hover {
+    background: lighten(@link-color, 5%);
+    border: 1px solid lighten(@link-color, 5%);
 }
 
 /* Text meant only for screen readers */
@@ -658,7 +666,7 @@ ol.comment-list {
 }
 
 #commentform {
-border: 1px solid #e5e5e5;
+border: 1px solid #ddd;
 padding: @padding @padding @padding / 2 @padding;
 margin-bottom: @padding;
 }
@@ -676,7 +684,7 @@ height: 120px;
 /* Input Styling */
 
 input[type="text"], input[type="email"], textarea {
-    border: 1px solid #e5e5e5;
+    border: 1px solid #ddd;
     color: lighten(@dark-color, 25%);
     display: block;
     width: 100%;
@@ -757,7 +765,7 @@ input[type="submit"]:hover {
     text-transform: uppercase;
     font-size: 18px;
     padding-bottom: @padding / 2;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #ddd;
     color:  #474747;
     .heading-font();
 }
@@ -826,7 +834,7 @@ font-size: 18px;
 
 /*  plugin : wp-pagenavi
 /* ------------------------------------ */
-.wp-pagenavi { font-weight: 400; line-height: 20px; float: none; margin-left: -6px; text-align: left; }
+.wp-pagenavi { font-weight: 400; line-height: 20px; float: none; margin-left: -6px; text-align: left; padding: 24px 0; }
 .wp-pagenavi a,
 .wp-pagenavi span { color: #aaa; font-size: 16px; padding: 7px 8px!important; display: inline; margin: 0 6px!important; }
 .wp-pagenavi span.pages { font-size: 17px; font-weight: 300; display: block; margin-bottom: 1em!important; border: none!important; }
@@ -867,7 +875,7 @@ margin-left: -15px;
 text-align: center;
 line-height: 2.6rem;
 border-radius: 50px;
-background:  #e5e5e5;
+background:  #ddd;
 transition: box-shadow 0.5s;
 text-decoration: none;
 font-weight: 700;
@@ -899,8 +907,8 @@ color: #999;
 
 /* Post navs */
 .post-navigation {
-    border-top: 1px dotted #e5e5e5;
-    border-bottom: 1px dotted #e5e5e5;
+    border-top: 1px dotted #ddd;
+    border-bottom: 1px dotted #ddd;
     margin-bottom: 40px;
 }
 
@@ -917,7 +925,7 @@ color: #999;
 }
 
 .post-navigation .fa {
-    color: #e5e5e5;
+    color: #ddd;
     font-size: 18px;
     position: absolute;
     top: 50%;

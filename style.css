@@ -39,7 +39,7 @@ and Blueprint http://www.blueprintcss.org/
 /* Bootstrap Style overrides */
 body,
 table {
-  background: #ffffff;
+  background: #f6f6f6;
   line-height: 1.685;
   color: #4B453A;
   font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -95,7 +95,7 @@ a,
 }
 a:hover,
 a:focus {
-  color: #00dedb;
+  color: #00c4c2;
 }
 .container {
   max-width: 960px;
@@ -103,7 +103,7 @@ a:focus {
   margin-right: auto;
 }
 .content-area {
-  background: #ffffff;
+  background: #f6f6f6;
 }
 /*header */
 .ghost-button {
@@ -130,7 +130,7 @@ a:focus {
 }
 .white-space {
   margin-top: 48px;
-  border-bottom: 1px dashed #eee;
+  border-bottom: 1px dashed #ddd;
   margin-bottom: 32px;
 }
 .home-hero {
@@ -275,7 +275,7 @@ a:focus {
 }
 /* Article styling */
 .site-content {
-  background: #ffffff;
+  background: #f6f6f6;
 }
 .site-main article {
   position: relative;
@@ -283,7 +283,7 @@ a:focus {
 }
 .blogroll {
   margin-bottom: 48px;
-  border-bottom: 1px dotted #e5e5e5;
+  border-bottom: 1px dotted #ddd;
 }
 .widget .blogroll {
   border-bottom: none;
@@ -353,10 +353,18 @@ big,
   display: block;
 }
 .more-tag {
-  margin-top: 24px;
+  margin: 36px 0;
 }
-.more-tag a {
+.more-tag .ghost-button {
+  font-size: inherit;
   text-transform: uppercase;
+  background: #00aba9;
+  color: #fff;
+}
+.more-tag .ghost-button:active,
+.more-tag .ghost-button:hover {
+  background: #00c4c2;
+  border: 1px solid #00c4c2;
 }
 /* Text meant only for screen readers */
 .screen-reader-text {
@@ -627,7 +635,7 @@ ol.comment-list {
   text-transform: uppercase;
 }
 #commentform {
-  border: 1px solid #e5e5e5;
+  border: 1px solid #ddd;
   padding: 24px 24px 12px 24px;
   margin-bottom: 24px;
 }
@@ -642,7 +650,7 @@ ol.comment-list {
 input[type="text"],
 input[type="email"],
 textarea {
-  border: 1px solid #e5e5e5;
+  border: 1px solid #ddd;
   color: #585858;
   display: block;
   width: 100%;
@@ -708,7 +716,7 @@ input[type="submit"]:hover {
   text-transform: uppercase;
   font-size: 18px;
   padding-bottom: 12px;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #ddd;
   color: #474747;
   line-height: 1.25;
   font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -813,6 +821,7 @@ input[type="submit"]:hover {
   float: none;
   margin-left: -6px;
   text-align: left;
+  padding: 24px 0;
 }
 .wp-pagenavi a,
 .wp-pagenavi span {
@@ -880,7 +889,7 @@ a.back-to-top {
   text-align: center;
   line-height: 2.6rem;
   border-radius: 50px;
-  background: #e5e5e5;
+  background: #ddd;
   transition: box-shadow 0.5s;
   text-decoration: none;
   font-weight: 700;
@@ -907,8 +916,8 @@ a.back-to-top {
 }
 /* Post navs */
 .post-navigation {
-  border-top: 1px dotted #e5e5e5;
-  border-bottom: 1px dotted #e5e5e5;
+  border-top: 1px dotted #ddd;
+  border-bottom: 1px dotted #ddd;
   margin-bottom: 40px;
 }
 .post-navigation a {
@@ -923,7 +932,7 @@ a.back-to-top {
   text-decoration: none;
 }
 .post-navigation .fa {
-  color: #e5e5e5;
+  color: #ddd;
   font-size: 18px;
   position: absolute;
   top: 50%;
