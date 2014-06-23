@@ -25,6 +25,11 @@ and Blueprint http://www.blueprintcss.org/
 ----------------------------------------------- */
 .heading-font {
   line-height: 1.25;
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+.body-font {
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .maxed-width {
   max-width: 960px;
@@ -34,8 +39,10 @@ and Blueprint http://www.blueprintcss.org/
 /* Bootstrap Style overrides */
 body,
 table {
+  background: #ffffff;
   line-height: 1.685;
-  color: #3a3a3a;
+  color: #4B453A;
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 h1,
 .h1,
@@ -46,6 +53,8 @@ h3,
 h4,
 .h4 {
   line-height: 1.25;
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
 }
 h1,
 h2,
@@ -54,6 +63,8 @@ h4,
 h5,
 h6 {
   color: #333;
+  line-height: 1.25;
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 h1 a:hover,
@@ -80,11 +91,11 @@ hr {
 }
 a,
 .link {
-  color: #009999;
+  color: #00aba9;
 }
 a:hover,
 a:focus {
-  color: #00cccc;
+  color: #00dedb;
 }
 .container {
   max-width: 960px;
@@ -95,16 +106,113 @@ a:focus {
   background: #ffffff;
 }
 /*header */
-#masthead {
+.ghost-button {
+  border: 1px solid #00aba9;
+  font-size: 17px;
+  padding: 7px 8px;
+  font-weight: normal;
+  margin: 6px 0;
+  margin-right: 12px;
+}
+.ghost-button:hover,
+.ghost-button:active {
+  color: #fff;
+  background: #00aba9;
+  border: 1px solid #00aba9;
+  text-decoration: none;
+}
+.ghost-button-white,
+.ghost-button-white:hover,
+.ghost-button-white:active {
+  padding-left: 0;
+  background: inherit;
+  border: none;
+}
+.white-space {
+  margin-top: 48px;
+  border-bottom: 1px dashed #eee;
+  margin-bottom: 32px;
+}
+.home-hero {
   position: relative;
-  padding: 36px 0 48px;
+  padding: 0;
+  margin: 0;
+  margin-top: -24px;
+  text-align: center;
+  width: 100%;
+  background: #000;
+}
+.hero-img {
+  width: 100%;
+}
+.hero-intro {
+  position: absolute;
+  bottom: 0;
+  margin-top: 12px;
+  margin-bottom: 6px;
+}
+.hero-intro h2 {
+  text-align: center;
+  color: #fff;
+  padding: 24px;
+  font-size: 80px;
+  line-height: 1.25;
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-weight: 300;
+}
+.home-intro {
+  padding: 50px 0;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 300;
+}
+.home-intro h3 {
+  margin-top: 0;
+  line-height: 1.685;
+  font-size: 17px;
+  font-weight: normal;
+}
+.intro-title-link {
+  font-weight: normal;
+  color: #888;
+}
+.intro-title-link:hover {
+  text-decoration: none;
+}
+.small-intro {
+  background: #eee;
+}
+.work-intro {
   background: #f6f6f6;
+}
+.connect-intro {
+  background: #191919;
+  color: #fff;
+  padding-bottom: 32px;
+}
+.past-intro {
+  background: #eee;
+}
+.past-intro strong {
+  font-weight: 400;
+}
+.intro-title,
+.intro-date {
+  text-transform: uppercase;
+}
+.intro-date {
+  font-size: 13px;
+  font-weight: 400;
+  text-align: right;
+  color: #aaa;
 }
 .brand-text-h1 {
   color: #eee;
   margin: 0;
   line-height: 21px;
   font-size: 21px;
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
 }
 .brand-text-h1 span {
@@ -123,12 +231,6 @@ a:focus {
   font-size: 15px;
   font-weight: 400;
   margin-bottom: 0;
-}
-.site-title a {
-  color: #424242;
-  font-weight: 300;
-  margin-top: 12px;
-  margin-bottom: 12px;
 }
 .site-description {
   font-size: 30px;
@@ -310,10 +412,10 @@ big,
 /* =Content
 ----------------------------------------------- */
 .sticky .fa-star {
-  color: #009999;
+  color: #00aba9;
 }
 .hentry {
-  margin: 0 0 1.5em;
+  margin: 0 0 0;
 }
 .byline,
 .updated {
@@ -550,10 +652,10 @@ textarea {
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-  border: 1px solid #009999;
+  border: 1px solid #00aba9;
 }
 input[type="submit"] {
-  background: #009999;
+  background: #00aba9;
   color: #fff;
   padding: 8px 14px;
   font-weight: 600;
@@ -562,7 +664,7 @@ input[type="submit"] {
   cursor: pointer;
 }
 input[type="submit"]:hover {
-  background: #007f80;
+  background: #009290;
 }
 /* =Widgets
 ----------------------------------------------- */
@@ -600,7 +702,7 @@ input[type="submit"]:hover {
   text-decoration: none;
 }
 #primary-sidebar .widget a:hover {
-  color: #009999;
+  color: #00aba9;
 }
 .widget-title {
   text-transform: uppercase;
@@ -609,6 +711,8 @@ input[type="submit"]:hover {
   border-bottom: 1px solid #e5e5e5;
   color: #474747;
   line-height: 1.25;
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
 }
 .widget-title a {
   color: inherit;
@@ -625,7 +729,7 @@ input[type="submit"]:hover {
 /* ------------------------------------ */
 .widget_calendar a {
   font-weight: 600;
-  color: #009999;
+  color: #00aba9;
 }
 .widget_calendar a:hover {
   color: #444!important;
@@ -634,7 +738,7 @@ input[type="submit"]:hover {
   width: 100%;
 }
 .widget_calendar caption {
-  background: #009999;
+  background: #00aba9;
   color: #fff;
   padding: 5px 10px;
 }
@@ -741,16 +845,16 @@ input[type="submit"]:hover {
   font-weight: normal!important;
 }
 .wp-pagenavi a {
-  color: #009999;
+  color: #00aba9;
   border: none!important;
-  border: 1px solid #009999 !important;
+  border: 1px solid #00aba9 !important;
 }
 .wp-pagenavi a:hover,
 .wp-pagenavi a:active,
 .wp-pagenavi span.current {
-  background: #009999;
+  background: #00aba9;
   border: none!important;
-  border: 1px solid #009999 !important;
+  border: 1px solid #00aba9 !important;
 }
 /* Footer */
 .site-footer {
@@ -761,8 +865,7 @@ input[type="submit"]:hover {
   line-height: 1.7em;
   color: #777;
   text-align: center;
-  background: #ffffff;
-  border-top: 1px dotted #e5e5e5;
+  background: #161616;
 }
 .site-footer a {
   color: #a2a2a2;

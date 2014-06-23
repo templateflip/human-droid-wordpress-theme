@@ -26,12 +26,18 @@ and Blueprint http://www.blueprintcss.org/
 ----------------------------------------------- */
 
 @dark-color: #181818;
-@link-color: #099;
-@content-background: #fff;
+@link-color: #00aba9;
+@content-background: #FFFFFF;
 @padding: 24px;
 @content-width: 960px;
 .heading-font {
     line-height: 1.25;
+    font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+}
+
+.body-font {
+    font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .maxed-width {
@@ -42,15 +48,17 @@ and Blueprint http://www.blueprintcss.org/
 
 /* Bootstrap Style overrides */
 body, table {
+    background: #ffffff;
     line-height: 1.685;
-    color: #3a3a3a;
+    color: #4B453A;
+    .body-font();
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
     .heading-font();
 }
 
-h1, h2, h3, h4, h5, h6 {color: #333; font-weight: 400;}
+h1, h2, h3, h4, h5, h6 {color: #333; .heading-font();}
 
 
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
@@ -86,10 +94,124 @@ a:hover, a:focus {
 }
 
 /*header */
-#masthead {
+.ghost-button {
+    border: 1px solid @link-color;
+    font-size: 17px;
+    padding: 7px 8px;
+    font-weight: normal;
+    margin: 6px 0;
+    margin-right: 12px;
+}
+
+.ghost-button:hover,
+.ghost-button:active {
+    color: #fff;
+    background: @link-color;
+    border: 1px solid @link-color;
+    text-decoration: none;
+}
+
+.ghost-button-white,
+.ghost-button-white:hover,
+.ghost-button-white:active {
+    padding-left: 0;
+    background: inherit;
+    border: none;
+}
+
+.white-space {
+    margin-top: 48px;
+    border-bottom: 1px dashed #eee;
+    margin-bottom: 32px;
+}
+
+.home-hero {
     position: relative;
-    padding: 1.5 * @padding 0 2 * @padding;
+    padding: 0;
+    margin: 0;
+    margin-top: -24px;
+    text-align: center;
+    width: 100%;
+    background: #000;
+}
+
+.hero-img {
+    width: 100%;
+}
+
+.hero-intro {
+    position:  absolute;
+    bottom:  0;
+    margin-top: @padding / 2;
+    margin-bottom: @padding / 4;
+}
+
+.hero-intro h2 {
+    text-align: center;
+    color: #fff;
+    padding: @padding;
+    font-size: 80px;
+    .heading-font();
+    font-weight: 300;
+}
+
+.home-intro {
+    padding: 50px 0;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.home-intro h3 {
+    margin-top: 0;
+    line-height: 1.685;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+.work-intro p {
+}
+
+.intro-title-link {
+    font-weight: normal;
+    color: #888;
+}
+
+.intro-title-link:hover {
+    text-decoration: none;
+}
+
+.small-intro {
+    background: #eee;
+}
+
+.work-intro {
     background: #f6f6f6;
+}
+
+.connect-intro {
+    background: #191919;
+    color: #fff;
+    padding-bottom: 32px;
+}
+
+.past-intro {
+    background: #eee;
+}
+
+.past-intro strong {
+    font-weight: 400;
+}
+
+.intro-title, .intro-date {
+    text-transform: uppercase;
+}
+
+.intro-date {
+    font-size: 13px;
+    font-weight: 400;
+    text-align: right;
+    color: #aaa;
 }
 
 .brand-text-h1 {
@@ -97,6 +219,7 @@ color: #eee;
 margin: 0;
 line-height: 21px;
 font-size: 21px;
+.body-font();
 font-weight: 300;
 }
 
@@ -116,12 +239,7 @@ font-weight: 300;
     font-size: 15px;
     font-weight: 400;
     margin-bottom: 0;
-}.site-title a {
-    color: #424242;
-    font-weight: 300;
-    margin-top: @padding / 2;
-    margin-bottom: @padding / 2;
-}.site-description {
+}.site-description {
     font-size: 30px;
     font-weight: 300;
     color: #999;
@@ -315,7 +433,7 @@ display: block;
    color: @link-color;
 }
 .hentry {
-	margin: 0 0 1.5em;
+	margin: 0 0 0;
 }
 .byline,
 .updated {
@@ -732,8 +850,7 @@ font-size: 18px;
     line-height: 1.7em;
     color: #777;
     text-align: center;
-    background: @content-background;
-    border-top: 1px dotted #e5e5e5;
+    background: #161616;
 }
 
 .site-footer a {

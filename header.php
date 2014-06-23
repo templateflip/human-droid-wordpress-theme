@@ -27,7 +27,7 @@
     <?php do_action( 'before' ); ?>
       <div id="topbar">
         <?php if (has_nav_menu('primary')): ?>
-            <nav class="navbar navbar-default navbar-top" role="navigation">
+            <nav class="navbar navbar-default navbar-static-top" role="navigation">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="container">
                     <div class="navbar-header">
@@ -39,14 +39,7 @@
                         </button>
 
                         <a class="navbar-brand" href="<?php echo home_url(); ?>" rel="home">
-                            <h1 class="brand-text-h1">
-                            <?php if(ot_get_option('custom-image')) { ?>
-                                    <img src="<?php echo ot_get_option('custom-image'); ?>" width="42px" height="42px" alt="<?php bloginfo('name') ?>" title="<?php bloginfo('name') ?>"/>
-                            <?php      
-                                  }
-                            ?>
-				                <span class="hidden-xs"><?php bloginfo('name') ?></span>
-                            </h1>
+                            <h1 class="brand-text-h1"><?php bloginfo('name') ?></h1>
                         </a>
                     </div>
                     
@@ -69,32 +62,7 @@
             </nav>
 		<?php endif; ?>
     </div>
-     <?php if ( is_page_template( 'home-page.php' ) ) : ?>
-        <header id="masthead" class="jumbotron site-header text-center" role="banner">
-            <div class="container">
-                <?php
-			    $header_image = ot_get_option('custom-image') ? ot_get_option('custom-image') : developr_admin_gravatar();
-                $header_class = ot_get_option('clip-image') ? '' : 'img-circle' ;
-			    if ( ! empty( $header_image ) ) :
-		        ?>
-			        <a class="site-logo"  href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-				        <img src="<?php echo $header_image; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" class="<?php echo $header_class; ?>" width="120" height="120" />
-			        </a>
-		        <?php endif; ?>
-		        <div class="site-branding text-center">
-                
-			            <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-                        <?php if ( !ot_get_option('site-description') ): ?><h2 class="site-description"><?php bloginfo( 'description' ); ?></h2><?php endif; ?>
-		        </div>
-            </div>
-            <div class="social-flare-container">
-                <div class="social-flare">	
-        			<?php developr_social_links() ?>
-                </div>
-            </div>
-	    </header><!-- #masthead -->
-    <?php endif; ?>
-	<div class="container">
-        <div class="row">
-            <div id="content" class="<?php echo ( is_page_template( 'home-page.php' ) ) ? 'col-md-12' : 'col-md-8 col-sm-8' ;?>">                    
+	<div class="<?php echo ( is_page_template( 'home-page.php' ) ) ? '' : 'container' ;?>">
+        <div class="<?php echo ( is_page_template( 'home-page.php' ) ) ? '' : 'row' ;?>">
+            <div id="content" class="<?php echo ( is_page_template( 'home-page.php' ) ) ? '' : 'col-md-8 col-sm-8' ;?>">                    
 	            <div class="site-content">
