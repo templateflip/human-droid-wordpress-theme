@@ -8,7 +8,7 @@
             </div><!--col-->    
         </div><!-- #content -->
         <?php if ( !is_page_template( 'home-page.php' ) ) : ?>
-        <div id="sidebar-content" class="col-md-4 col-sm-4">
+        <div id="sidebar-content" class="col-md-4">
             <div id="primary-sidebar" class="sidebar widget-area" role="complementary">
                 <div class="">
 		            <?php do_action( 'before_sidebar' ); ?>

@@ -64,5 +64,5 @@
     </div>
 	<div class="<?php echo ( is_page_template( 'home-page.php' ) ) ? '' : 'container' ;?>">
         <div class="<?php echo ( is_page_template( 'home-page.php' ) ) ? '' : 'row' ;?>">
-            <div id="content" class="<?php echo ( is_page_template( 'home-page.php' ) ) ? '' : 'col-md-8 col-sm-8' ;?>">                    
+            <div id="content" class="<?php echo ( is_page_template( 'home-page.php' ) ) ? '' : 'col-md-8' ;?>">                    
 	            <div class="site-content">

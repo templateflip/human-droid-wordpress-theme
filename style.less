@@ -27,12 +27,12 @@ and Blueprint http://www.blueprintcss.org/
 
 @dark-color: #181818;
 @link-color: #00aba9;
-@content-background: #f6f6f6;
+@content-background: #fff;
 @padding: 24px;
 @content-width: 960px;
 .heading-font {
     line-height: 1.25;
-    font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 400;
 }
 
@@ -48,7 +48,7 @@ and Blueprint http://www.blueprintcss.org/
 
 /* Bootstrap Style overrides */
 body, table {
-    background: #f6f6f6;
+    background: #fff;
     line-height: 1.685;
     color: #4B453A;
     .body-font();
@@ -117,6 +117,7 @@ a:hover, a:focus {
     padding-left: 0;
     background: inherit;
     border: none;
+    font-weight: 300;
 }
 
 .white-space {
@@ -186,12 +187,12 @@ a:hover, a:focus {
 }
 
 .work-intro {
-    background: #f6f6f6;
+    background: #fff;
 }
 
 .connect-intro {
     background: #191919;
-    color: #fff;
+    color: #e5e5e5;
     padding-bottom: 32px;
 }
 
@@ -286,6 +287,7 @@ color: #fff;
 }
 /* Article styling */
 .site-content {
+    width: 100%;
     background: @content-background;
 }
 
@@ -987,20 +989,9 @@ text-transform: uppercase;
 }
 
 @media only screen and (min-width: 768px) {
-	#content.col-md-8, #content.col-sm-8 {
-        width: 71%;
-    }
-    
-    #sidebar-content.col-md-4, #sidebar-content.col-sm-4 {
-        width: 29%;
-    }
 }
 
 @media only screen and (max-width: 767px) {
-    .container {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
 
     body, table {
         font-size: 14px;
@@ -1012,6 +1003,14 @@ text-transform: uppercase;
 
     .site-description {
         font-size: 18px;
+    }
+
+    .hero-intro h2 {
+        font-size: 42px;
+    }
+
+    .intro-date {
+        text-align: left;
     }
 
     h1 {
