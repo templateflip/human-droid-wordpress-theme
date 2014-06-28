@@ -25,7 +25,7 @@ and Blueprint http://www.blueprintcss.org/
 ----------------------------------------------- */
 .heading-font {
   line-height: 1.25;
-  font-family: 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Varela Round', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 .body-font {
@@ -41,7 +41,7 @@ body,
 table {
   background: #fff;
   line-height: 1.685;
-  color: #4B453A;
+  color: #4c4c4c;
   font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 h1,
@@ -53,7 +53,7 @@ h3,
 h4,
 .h4 {
   line-height: 1.25;
-  font-family: 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Varela Round', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 h1,
@@ -64,7 +64,7 @@ h5,
 h6 {
   color: #333;
   line-height: 1.25;
-  font-family: 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Varela Round', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 h1 a:hover,
@@ -91,11 +91,11 @@ hr {
 }
 a,
 .link {
-  color: #00aba9;
+  color: #009688;
 }
 a:hover,
 a:focus {
-  color: #00c4c2;
+  color: #00b09f;
 }
 .container {
   max-width: 960px;
@@ -107,27 +107,30 @@ a:focus {
 }
 /*header */
 .ghost-button {
-  border: 1px solid #00aba9;
+  border: 1px solid #009688;
   font-size: 17px;
-  padding: 7px 8px;
+  padding: 7px 12px;
   font-weight: normal;
   margin: 6px 0;
+  display: inline-block;
   margin-right: 12px;
 }
 .ghost-button:hover,
 .ghost-button:active {
   color: #fff;
-  background: #00aba9;
-  border: 1px solid #00aba9;
+  background: #009688;
+  border: 1px solid #009688;
   text-decoration: none;
 }
 .ghost-button-white,
 .ghost-button-white:hover,
 .ghost-button-white:active {
-  padding-left: 0;
   background: inherit;
+  padding: 0 16px;
+  padding-left: 0;
+  margin: 0;
   border: none;
-  font-weight: 300;
+  font-weight: 400;
 }
 .white-space {
   margin-top: 48px;
@@ -157,9 +160,7 @@ a:focus {
   color: #fff;
   padding: 24px;
   font-size: 80px;
-  line-height: 1.25;
-  font-family: 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
 }
 .home-intro {
@@ -188,12 +189,12 @@ a:focus {
   background: #fff;
 }
 .connect-intro {
-  background: #191919;
-  color: #e5e5e5;
+  background: #262626;
+  color: #fff;
   padding-bottom: 32px;
 }
 .past-intro {
-  background: #eee;
+  background: #f5f5f5;
 }
 .past-intro strong {
   font-weight: 400;
@@ -209,12 +210,11 @@ a:focus {
   color: #aaa;
 }
 .brand-text-h1 {
-  color: #eee;
+  color: #ddd;
   margin: 0;
   line-height: 21px;
   font-size: 21px;
   font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
 }
 .brand-text-h1 span {
   margin-left: 50px;
@@ -360,13 +360,13 @@ big,
 .more-tag .ghost-button {
   font-size: inherit;
   text-transform: uppercase;
-  background: #00aba9;
+  background: #009688;
   color: #fff;
 }
 .more-tag .ghost-button:active,
 .more-tag .ghost-button:hover {
-  background: #00c4c2;
-  border: 1px solid #00c4c2;
+  background: #00b09f;
+  border: 1px solid #00b09f;
 }
 /* Text meant only for screen readers */
 .screen-reader-text {
@@ -422,7 +422,7 @@ big,
 /* =Content
 ----------------------------------------------- */
 .sticky .fa-star {
-  color: #00aba9;
+  color: #009688;
 }
 .hentry {
   margin: 0 0 0;
@@ -662,10 +662,10 @@ textarea {
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-  border: 1px solid #00aba9;
+  border: 1px solid #009688;
 }
 input[type="submit"] {
-  background: #00aba9;
+  background: #009688;
   color: #fff;
   padding: 8px 14px;
   font-weight: 600;
@@ -674,7 +674,7 @@ input[type="submit"] {
   cursor: pointer;
 }
 input[type="submit"]:hover {
-  background: #009290;
+  background: #007d71;
 }
 /* =Widgets
 ----------------------------------------------- */
@@ -712,7 +712,7 @@ input[type="submit"]:hover {
   text-decoration: none;
 }
 #primary-sidebar .widget a:hover {
-  color: #00aba9;
+  color: #009688;
 }
 .widget-title {
   text-transform: uppercase;
@@ -721,7 +721,7 @@ input[type="submit"]:hover {
   border-bottom: 1px solid #ddd;
   color: #474747;
   line-height: 1.25;
-  font-family: 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Varela Round', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 .widget-title a {
@@ -739,7 +739,7 @@ input[type="submit"]:hover {
 /* ------------------------------------ */
 .widget_calendar a {
   font-weight: 600;
-  color: #00aba9;
+  color: #009688;
 }
 .widget_calendar a:hover {
   color: #444!important;
@@ -748,7 +748,7 @@ input[type="submit"]:hover {
   width: 100%;
 }
 .widget_calendar caption {
-  background: #00aba9;
+  background: #009688;
   color: #fff;
   padding: 5px 10px;
 }
@@ -856,16 +856,16 @@ input[type="submit"]:hover {
   font-weight: normal!important;
 }
 .wp-pagenavi a {
-  color: #00aba9;
+  color: #009688;
   border: none!important;
-  border: 1px solid #00aba9 !important;
+  border: 1px solid #009688 !important;
 }
 .wp-pagenavi a:hover,
 .wp-pagenavi a:active,
 .wp-pagenavi span.current {
-  background: #00aba9;
+  background: #009688;
   border: none!important;
-  border: 1px solid #00aba9 !important;
+  border: 1px solid #009688 !important;
 }
 /* Footer */
 .site-footer {
