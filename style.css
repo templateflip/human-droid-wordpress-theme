@@ -25,21 +25,21 @@ and Blueprint http://www.blueprintcss.org/
 ----------------------------------------------- */
 .heading-font {
   line-height: 1.25;
-  font-family: 'Varela Round', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-family: 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
 }
 .body-font {
   font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .maxed-width {
-  max-width: 960px;
+  max-width: 1312px;
   margin-left: auto;
   margin-right: auto;
 }
 /* Bootstrap Style overrides */
 body,
 table {
-  background: #fff;
+  font-size: 16px;
   line-height: 1.685;
   color: #4c4c4c;
   font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -53,8 +53,8 @@ h3,
 h4,
 .h4 {
   line-height: 1.25;
-  font-family: 'Varela Round', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-family: 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
 }
 h1,
 h2,
@@ -64,8 +64,8 @@ h5,
 h6 {
   color: #333;
   line-height: 1.25;
-  font-family: 'Varela Round', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-family: 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
 }
 h1 a:hover,
 h2 a:hover,
@@ -98,7 +98,7 @@ a:focus {
   color: #00b09f;
 }
 .container {
-  max-width: 960px;
+  max-width: 1312px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -148,6 +148,7 @@ a:focus {
 }
 .hero-img {
   width: 100%;
+  max-width: 930px;
 }
 .hero-intro {
   position: absolute;
@@ -165,9 +166,13 @@ a:focus {
 }
 .home-intro {
   padding: 50px 0;
-  width: 100%;
   font-size: 16px;
   font-weight: 300;
+}
+.home-intro .container {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .home-intro h3 {
   margin-top: 0;
@@ -358,15 +363,8 @@ big,
   margin: 36px 0;
 }
 .more-tag .ghost-button {
-  font-size: inherit;
+  font-size: 14px;
   text-transform: uppercase;
-  background: #009688;
-  color: #fff;
-}
-.more-tag .ghost-button:active,
-.more-tag .ghost-button:hover {
-  background: #00b09f;
-  border: 1px solid #00b09f;
 }
 /* Text meant only for screen readers */
 .screen-reader-text {
@@ -682,7 +680,7 @@ input[type="submit"]:hover {
   padding: 32px 0;
 }
 #above-footer {
-  max-width: 960px;
+  max-width: 1312px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -721,8 +719,8 @@ input[type="submit"]:hover {
   border-bottom: 1px solid #ddd;
   color: #474747;
   line-height: 1.25;
-  font-family: 'Varela Round', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-family: 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
 }
 .widget-title a {
   color: inherit;

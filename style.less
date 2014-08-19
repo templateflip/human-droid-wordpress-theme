@@ -29,11 +29,12 @@ and Blueprint http://www.blueprintcss.org/
 @link-color: #009688;
 @content-background: #fff;
 @padding: 24px;
-@content-width: 960px;
+@content-width: 1312px;
+@narrow-width: 960px;
 .heading-font {
     line-height: 1.25;
-    font-family: 'Varela Round', "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 400;
+    font-family: 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
 }
 
 .body-font {
@@ -48,7 +49,7 @@ and Blueprint http://www.blueprintcss.org/
 
 /* Bootstrap Style overrides */
 body, table {
-    background: #fff;
+    font-size: 16px;
     line-height: 1.685;
     color: #4c4c4c;
     .body-font();
@@ -141,6 +142,7 @@ a:hover, a:focus {
 
 .hero-img {
     width: 100%;
+    max-width: 930px;
 }
 
 .hero-intro {
@@ -161,9 +163,14 @@ a:hover, a:focus {
 
 .home-intro {
     padding: 50px 0;
-    width: 100%;
     font-size: 16px;
     font-weight: 300;
+}
+
+.home-intro .container {
+    max-width: @narrow-width;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .home-intro h3 {
@@ -293,6 +300,7 @@ color: #fff;
     background: @content-background;
 }
 
+
 .site-main article {
      position: relative;
      margin-top: @padding;
@@ -374,15 +382,11 @@ display: block;
 }
 
 .more-tag .ghost-button {
-    font-size: inherit;
+    font-size: 14px;
     text-transform: uppercase;
-    background: @link-color;
-    color:  #fff;
 }
 
 .more-tag .ghost-button:active, .more-tag .ghost-button:hover {
-    background: lighten(@link-color, 5%);
-    border: 1px solid lighten(@link-color, 5%);
 }
 
 /* Text meant only for screen readers */
