@@ -7,10 +7,11 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<h1 class="entry-title"><?php the_title(); ?></h1>
-	</header><!-- .entry-header -->
-
+     <?php if (the_title('', '', FALSE) != ''): ?>
+	    <header class="page-header">
+		    <h1 class="entry-title"><?php the_title(); ?></h1>
+	    </header><!-- .entry-header -->
+    <?php endif; ?>
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php

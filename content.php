@@ -11,7 +11,7 @@
     <?php if ( 'post' == get_post_type() ) : ?>
         <div class="entry-meta">
 		    
-
+            <span class="pull-right"><i class="fa fa-comments-o hidden-xs"></i><a class="hidden-xs" href="<?php comments_link(); ?>"><?php comments_number( 'Leave a Reply', '1 Response', '% Responses' ); ?></a></span>
             <a href="<?php the_permalink(); ?>"><?php developr_posted_on(); ?></a>
 	    </div><!-- .entry-meta -->
 	<?php endif; ?>

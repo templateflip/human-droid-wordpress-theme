@@ -35,9 +35,8 @@ and Blueprint http://www.blueprintcss.org/
 /* Bootstrap Style overrides */
 body,
 table {
-  font-size: 16px;
   line-height: 1.685;
-  color: #4c4c4c;
+  color: #444;
 }
 h1,
 .h1,
@@ -271,6 +270,11 @@ a:focus {
   color: #fff;
 }
 /* Article styling */
+.page-header {
+  margin-top: 0;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #eee;
+}
 .site-content {
   width: 100%;
   background: #ffffff;
