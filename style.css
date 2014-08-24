@@ -1074,7 +1074,8 @@ a.back-to-top {
     padding-top: 20px;
   }
   #primary-sidebar {
-    margin-left: -15px;
+    padding: 15px;
+    margin-left: 0;
   }
   article.blogroll {
     padding: 20px 0;
@@ -1106,10 +1107,6 @@ a.back-to-top {
   .sidebar {
     padding-top: 0;
     padding-bottom: 0;
-  }
-  #primary-sidebar {
-    padding: 15px;
-    margin-left: 0;
   }
   .hero-intro h2 {
     font-size: 42px;
