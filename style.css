@@ -25,11 +25,7 @@ and Blueprint http://www.blueprintcss.org/
 ----------------------------------------------- */
 .heading-font {
   line-height: 1.25;
-  font-family: 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 500;
-}
-.body-font {
-  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
 }
 .maxed-width {
   max-width: 1312px;
@@ -42,7 +38,6 @@ table {
   font-size: 16px;
   line-height: 1.685;
   color: #4c4c4c;
-  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 h1,
 .h1,
@@ -53,8 +48,7 @@ h3,
 h4,
 .h4 {
   line-height: 1.25;
-  font-family: 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 h1,
 h2,
@@ -64,8 +58,7 @@ h5,
 h6 {
   color: #333;
   line-height: 1.25;
-  font-family: 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 h1 a:hover,
 h2 a:hover,
@@ -161,7 +154,6 @@ a:focus {
   color: #fff;
   padding: 24px;
   font-size: 80px;
-  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
 }
 .home-intro {
@@ -219,7 +211,6 @@ a:focus {
   margin: 0;
   line-height: 21px;
   font-size: 21px;
-  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .brand-text-h1 span {
   margin-left: 50px;
@@ -719,8 +710,7 @@ input[type="submit"]:hover {
   border-bottom: 1px solid #ddd;
   color: #474747;
   line-height: 1.25;
-  font-family: 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 .widget-title a {
   color: inherit;
