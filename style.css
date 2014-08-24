@@ -535,6 +535,30 @@ iframe,
 object {
   max-width: 100%;
 }
+/*  single : author bio
+/* ------------------------------------ */
+.author-bio {
+  border-bottom: 1px solid #eee;
+  position: relative;
+  margin-bottom: 40px;
+}
+.author-bio .bio-avatar {
+  width: 100px;
+  height: auto;
+  margin: 20px;
+  margin-top: 0px;
+  margin-right: 0px;
+}
+.author-bio .bio-avatar img {
+  display: block;
+  width: 100%;
+  height: auto;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.author-bio p {
+  margin-bottom: 32px;
+}
 /* =Comments
 ----------------------------------------------- */
 .comment-list,
@@ -711,6 +735,7 @@ input[type="submit"]:hover {
   text-transform: uppercase;
   font-size: 18px;
   padding-bottom: 12px;
+  margin-bottom: 17px;
   border-bottom: 1px solid #ddd;
   color: #474747;
   line-height: 1.25;
@@ -803,6 +828,10 @@ input[type="submit"]:hover {
   background: #1d1d1d;
   color: #fff !important;
   top: -2px;
+}
+/* Jetpack share widgets */
+div.sharedaddy h3.sd-title {
+  font-size: 12px !important;
 }
 /* ------------------------------------------------------------------------- *
  *  Plugins
@@ -912,7 +941,7 @@ a.back-to-top {
 .post-navigation {
   border-top: 1px dotted #ddd;
   border-bottom: 1px dotted #ddd;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 .post-navigation a {
   width: 100%;

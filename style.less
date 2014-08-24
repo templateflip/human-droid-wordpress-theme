@@ -563,6 +563,15 @@ object {
 	max-width: 100%;
 }
 
+
+/*  single : author bio
+/* ------------------------------------ */
+.author-bio { border-bottom: 1px solid #eee; position: relative; margin-bottom: 40px; }
+.author-bio .bio-avatar { width: 100px; height: auto; margin: 20px; margin-top: 0px; margin-right: 0px; }
+.author-bio .bio-avatar img { display: block; width: 100%; height: auto; -webkit-border-radius: 50%; border-radius: 50%; }
+.author-bio p { margin-bottom: 32px; }
+.author-bio .bio-desc { }
+
 /* =Comments
 ----------------------------------------------- */
 .comment-list, .comment-list .children {
@@ -777,6 +786,7 @@ input[type="submit"]:hover {
     text-transform: uppercase;
     font-size: 18px;
     padding-bottom: @padding / 2;
+    margin-bottom: 17px;
     border-bottom: 1px solid #ddd;
     color:  #474747;
     .heading-font();
@@ -838,6 +848,11 @@ font-size: 18px;
     background: lighten(@dark-color, 2%);
     color: #fff !important;
     top: -2px;
+}
+
+/* Jetpack share widgets */
+div.sharedaddy h3.sd-title {
+    font-size: 12px !important;
 }
 
 /* ------------------------------------------------------------------------- *
@@ -921,7 +936,7 @@ color: #999;
 .post-navigation {
     border-top: 1px dotted #ddd;
     border-bottom: 1px dotted #ddd;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
 }
 
 .post-navigation a {
