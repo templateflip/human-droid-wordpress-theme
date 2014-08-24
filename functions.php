@@ -217,6 +217,7 @@ if ( ! function_exists( 'developr_social_links' ) ) {
 		if ( !ot_get_option('social-links') =='' ) {
 			$links = ot_get_option('social-links', array());
 			if ( !empty( $links ) ) {	
+                echo '<div class="dev-social-links">';
 				foreach( $links as $item ) {
 					
 					// Build each separate html-section only if set
@@ -236,6 +237,7 @@ if ( ! function_exists( 'developr_social_links' ) ) {
 						echo '<a rel="nofollow" class="social-links" '.$title.' '.$link.' '.$target.' '.$color.'><i '.$icon.' ></i></a>'."\n";
 					}
 				}
+                echo '</div>';
 			}
 		}
 	}

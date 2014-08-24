@@ -811,6 +811,7 @@ input[type="submit"]:hover {
 }
 
 .widget ul li {
+    margin-left: 15px;
     margin-bottom: @padding / 2;
 }
 
@@ -823,12 +824,17 @@ input[type="submit"]:hover {
     color: @link-color;
 }
 
+#primary-sidebar .widget-title {
+background: #fbfbfb;
+border: 1px dotted #bbb;
+padding: 6px 15px 8px;
+}
+
 .widget-title {
     text-transform: uppercase;
     font-size: 18px;
     padding-bottom: @padding / 2;
     margin-bottom: 17px;
-    border-bottom: 1px solid #ddd;
     color:  #474747;
     .heading-font();
 }
@@ -883,6 +889,10 @@ font-size: 18px;
     line-height: 40px; 
     text-align: center;
     -webkit-transition: all 0.5s ease;
+}
+
+.dev-social-links {
+    margin-left: 15px;
 }
 
 .widget_developr_social a:hover {
@@ -1055,6 +1065,16 @@ text-transform: uppercase;
 }
 
 @media only screen and (max-width: 991px) {
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .content-area {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
     #content {
         padding-top: 15px;
         padding-bottom: 15px;
@@ -1070,7 +1090,10 @@ text-transform: uppercase;
         padding-top: 20px;
     }
 
-    
+    #primary-sidebar {
+        margin-left: -15px;
+    }
+
     article.blogroll {
         padding: 20px 0;
     }
@@ -1096,6 +1119,11 @@ text-transform: uppercase;
         font-size: 18px;
     }
 
+    .site > .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     #content {
         padding-top: 0;
         padding-bottom: 0;
@@ -1104,6 +1132,11 @@ text-transform: uppercase;
     .sidebar {
         padding-top: 0;
         padding-bottom: 0;
+    }
+
+    #primary-sidebar {
+        padding: 15px;
+        margin-left: 0;
     }
 
     .hero-intro h2 {

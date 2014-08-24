@@ -761,6 +761,7 @@ input[type="submit"]:hover {
   padding-left: 24px;
 }
 .widget ul li {
+  margin-left: 15px;
   margin-bottom: 12px;
 }
 #primary-sidebar .widget a {
@@ -770,12 +771,16 @@ input[type="submit"]:hover {
 #primary-sidebar .widget a:hover {
   color: #009688;
 }
+#primary-sidebar .widget-title {
+  background: #fbfbfb;
+  border: 1px dotted #bbb;
+  padding: 6px 15px 8px;
+}
 .widget-title {
   text-transform: uppercase;
   font-size: 18px;
   padding-bottom: 12px;
   margin-bottom: 17px;
-  border-bottom: 1px solid #ddd;
   color: #474747;
   line-height: 1.25;
   font-weight: 400;
@@ -862,6 +867,9 @@ input[type="submit"]:hover {
   line-height: 40px;
   text-align: center;
   -webkit-transition: all 0.5s ease;
+}
+.dev-social-links {
+  margin-left: 15px;
 }
 .widget_developr_social a:hover {
   background: #1d1d1d;
@@ -1045,6 +1053,14 @@ a.back-to-top {
   display: block;
 }
 @media only screen and (max-width: 991px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .content-area {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
   #content {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -1056,6 +1072,9 @@ a.back-to-top {
   .site-main {
     padding: 15px;
     padding-top: 20px;
+  }
+  #primary-sidebar {
+    margin-left: -15px;
   }
   article.blogroll {
     padding: 20px 0;
@@ -1076,6 +1095,10 @@ a.back-to-top {
   .site-description {
     font-size: 18px;
   }
+  .site > .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
   #content {
     padding-top: 0;
     padding-bottom: 0;
@@ -1083,6 +1106,10 @@ a.back-to-top {
   .sidebar {
     padding-top: 0;
     padding-bottom: 0;
+  }
+  #primary-sidebar {
+    padding: 15px;
+    margin-left: 0;
   }
   .hero-intro h2 {
     font-size: 42px;
