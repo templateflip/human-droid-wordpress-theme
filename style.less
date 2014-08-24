@@ -27,9 +27,10 @@ and Blueprint http://www.blueprintcss.org/
 
 @dark-color: #181818;
 @link-color: #009688;
+@body-color: #eee;
 @content-background: #fff;
 @padding: 24px;
-@content-width: 1312px;
+@content-width: 1200px;
 @narrow-width: 960px;
 .heading-font {
     line-height: 1.25;
@@ -40,6 +41,7 @@ and Blueprint http://www.blueprintcss.org/
 }
 
 .maxed-width {
+    width: 100%;
     max-width: @content-width;
     margin-left: auto;
     margin-right: auto;
@@ -47,6 +49,8 @@ and Blueprint http://www.blueprintcss.org/
 
 /* Bootstrap Style overrides */
 body, table {
+    background-color: @body-color;
+    overflow-x: hidden; /* Prevent scroll on narrow devices */
     line-height: 1.685;
     color: #444;
     .body-font();
@@ -58,6 +62,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 
 h1, h2, h3, h4, h5, h6 {color: #333; .heading-font();}
 
+h1.entry-title, h1.page-title, h2.entry-title {
+margin-top: 0;
+line-height: 1.2;
+}
 
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
     text-decoration: none;
@@ -299,21 +307,51 @@ margin-bottom: 12px;
 border-bottom: 1px dotted #ddd;
 }
 
+#content {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#content .container {
+    padding: 0;
+}
+
 .site-content {
     width: 100%;
     background: @content-background;
 }
 
+.site-main {
+    padding: 32px;
+}
+
+.site-page-home {
+    padding: 0;
+    margin-top: -40px;
+    margin-bottom: -40px;
+}
 
 .site-main article {
      position: relative;
-     margin-top: @padding;
+     max-width: 700px;
+     margin-left: auto;
+     margin-right: auto;
 }
 
-.blogroll {
-     margin-bottom:  2 * @padding;
+.site-page article {
+    max-width: 100%;
+}
+
+article.blogroll {
+     max-width: 100%;
+     padding: 32px 0;
      border-bottom: 1px dotted #ddd;
 }
+
+.site-main > article.blogroll:first-child {
+     padding-top: 0;
+}
+
 .widget .blogroll {
   border-bottom: none;
 }
@@ -381,9 +419,6 @@ clear: both;
 display: block;
 }
 
-.more-tag {
-    margin: 1.5*@padding 0;
-}
 
 .more-tag .ghost-button {
     font-size: 14px;
@@ -670,7 +705,6 @@ ol.comment-list {
 
 .comments-area {
     padding: 0px;
-    padding-bottom: 2 * @padding;
 }
 
 .comments-area .form-allowed-tags, .comment-notes {
@@ -736,8 +770,14 @@ input[type="submit"]:hover {
 /* =Widgets
 ----------------------------------------------- */
 
-#primary-sidebar {
-    padding: 32px 0;
+.sidebar {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#primary-sidebar .container {
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 #above-footer {
@@ -1014,7 +1054,32 @@ text-transform: uppercase;
 	display: block;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 991px) {
+    #content {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .sidebar {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .site-main {
+        padding: 15px;
+        padding-top: 20px;
+    }
+
+    
+    article.blogroll {
+        padding: 20px 0;
+    }
+
+    .site-main article {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    
 }
 
 @media only screen and (max-width: 767px) {
@@ -1029,6 +1094,16 @@ text-transform: uppercase;
 
     .site-description {
         font-size: 18px;
+    }
+
+    #content {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .sidebar {
+        padding-top: 0;
+        padding-bottom: 0;
     }
 
     .hero-intro h2 {

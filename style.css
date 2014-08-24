@@ -28,13 +28,18 @@ and Blueprint http://www.blueprintcss.org/
   font-weight: 400;
 }
 .maxed-width {
-  max-width: 1312px;
+  width: 100%;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
 /* Bootstrap Style overrides */
 body,
 table {
+  background-color: #eeeeee;
+  overflow-x: hidden;
+  /* Prevent scroll on narrow devices */
+
   line-height: 1.685;
   color: #444;
 }
@@ -58,6 +63,12 @@ h6 {
   color: #333;
   line-height: 1.25;
   font-weight: 400;
+}
+h1.entry-title,
+h1.page-title,
+h2.entry-title {
+  margin-top: 0;
+  line-height: 1.2;
 }
 h1 a:hover,
 h2 a:hover,
@@ -90,7 +101,8 @@ a:focus {
   color: #00b09f;
 }
 .container {
-  max-width: 1312px;
+  width: 100%;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -275,17 +287,41 @@ a:focus {
   margin-bottom: 12px;
   border-bottom: 1px dotted #ddd;
 }
+#content {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+#content .container {
+  padding: 0;
+}
 .site-content {
   width: 100%;
   background: #ffffff;
 }
+.site-main {
+  padding: 32px;
+}
+.site-page-home {
+  padding: 0;
+  margin-top: -40px;
+  margin-bottom: -40px;
+}
 .site-main article {
   position: relative;
-  margin-top: 24px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.blogroll {
-  margin-bottom: 48px;
+.site-page article {
+  max-width: 100%;
+}
+article.blogroll {
+  max-width: 100%;
+  padding: 32px 0;
   border-bottom: 1px dotted #ddd;
+}
+.site-main > article.blogroll:first-child {
+  padding-top: 0;
 }
 .widget .blogroll {
   border-bottom: none;
@@ -353,9 +389,6 @@ big,
   margin: 18px auto;
   clear: both;
   display: block;
-}
-.more-tag {
-  margin: 36px 0;
 }
 .more-tag .ghost-button {
   font-size: 14px;
@@ -640,7 +673,6 @@ ol.comment-list {
 }
 .comments-area {
   padding: 0px;
-  padding-bottom: 48px;
 }
 .comments-area .form-allowed-tags,
 .comment-notes {
@@ -696,11 +728,17 @@ input[type="submit"]:hover {
 }
 /* =Widgets
 ----------------------------------------------- */
-#primary-sidebar {
-  padding: 32px 0;
+.sidebar {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+#primary-sidebar .container {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 #above-footer {
-  max-width: 1312px;
+  width: 100%;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1006,8 +1044,26 @@ a.back-to-top {
 .infinity-end.neverending .site-footer {
   display: block;
 }
-@media only screen and (min-width: 768px) {
-  
+@media only screen and (max-width: 991px) {
+  #content {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .sidebar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .site-main {
+    padding: 15px;
+    padding-top: 20px;
+  }
+  article.blogroll {
+    padding: 20px 0;
+  }
+  .site-main article {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 @media only screen and (max-width: 767px) {
   body,
@@ -1019,6 +1075,14 @@ a.back-to-top {
   }
   .site-description {
     font-size: 18px;
+  }
+  #content {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .sidebar {
+    padding-top: 0;
+    padding-bottom: 0;
   }
   .hero-intro h2 {
     font-size: 42px;
