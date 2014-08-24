@@ -13,9 +13,7 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<?php get_template_part( 'content', 'single' ); ?>
-
-            <?php if ( ot_get_option( 'post-nav' ) == 'content') { developr_post_nav(); } ?>
-
+            
             <?php if ( get_the_author_meta( 'description' ) ): ?>
                 <div class="author-bio">
 				    <div class="bio-avatar pull-right"><?php echo get_avatar(get_the_author_meta('user_email'),'128'); ?></div>
@@ -24,6 +22,9 @@ get_header(); ?>
 				    <div class="clear"></div>
                 </div>
 		    <?php endif; ?>
+
+            <?php if ( ot_get_option( 'post-nav' ) == 'content') { developr_post_nav(); } ?>
+
 
 			<?php
 				// If comments are open or we have at least one comment, load up the comment template
