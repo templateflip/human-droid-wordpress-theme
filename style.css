@@ -1073,6 +1073,9 @@ a.back-to-top {
     padding: 15px;
     padding-top: 20px;
   }
+  .site-page-home {
+    padding: 0;
+  }
   #primary-sidebar {
     padding: 15px;
     margin-left: 0;
