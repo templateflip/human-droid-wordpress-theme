@@ -109,6 +109,17 @@ function human_droid_author_profile() {
 }
 
 
+// Add search in header after primary menu
+beans_add_smart_action( 'beans_primary_menu_after_markup', 'human_droid_primary_menu_search' );
+function human_droid_primary_menu_search() {
+	echo beans_open_markup( 'human_droid_menu_primary_search', 'div', array(
+		'class' => 'tm-search uk-navbar-flip uk-hidden-small'
+	) );
+		get_search_form();
+	echo beans_close_markup( 'human_droid_menu_primary_search', 'div' );
+}
+
+
 // Modify beans layout (filter)
 beans_add_smart_action( 'beans_layout_grid_settings', 'human_droid_layout_grid_settings' );
 
