@@ -5,9 +5,7 @@ beans_add_smart_action( 'beans_before_load_document', 'human_droid_index_setup_d
 function human_droid_index_setup_document() {
 
 	// Posts grid
-	beans_add_attribute( 'beans_content', 'class', 'tm-posts-grid uk-grid uk-grid-width-small-1-2 uk-grid-width-medium-1-2' );
-	beans_add_attribute( 'beans_content', 'data-uk-grid-margin', '' );
-	beans_add_attribute( 'beans_content', 'data-uk-grid-match', "{target:'.uk-panel'}" );
+	beans_add_attribute( 'beans_content', 'class', 'tm-posts-grid' );
 	beans_wrap_inner_markup( 'beans_post', 'human_droid_post_panel', 'div', array(
 	  'class' => 'uk-panel uk-panel-box'
 	) );
@@ -43,12 +41,10 @@ beans_add_smart_action( 'beans_edit_post_image_args', 'human_droid_index_post_im
 
 function human_droid_index_post_image_args( $args ) {
 
-	$args['resize'] = array( 430, 250, true ); //430, 250
+	$args['resize'] = array( 756, 320, true );
 
 	return $args;
 
 }
-
-
 // Load beans document
 beans_load_document();
