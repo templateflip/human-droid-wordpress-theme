@@ -99,9 +99,9 @@ function human_droid_setup_document() {
 
 // Author profile in posts
 function human_droid_author_profile() {
-	echo beans_open_markup( 'human_droid_author_profile', 'div',  array( 'class' => 'uk-panel' ) );
-	echo '<h3 class="uk-panel-title">'.__('Author', 'human-droid').'</h3>';
-	echo '<div class="uk-clearfix">';
+	echo '<h3>'.__('About the Author', 'human-droid').'</h3>';
+	echo beans_open_markup( 'human_droid_author_profile', 'div',  array( 'class' => 'uk-panel uk-panel-box-secondary uk-panel-space' ) );
+  echo '<div class="uk-clearfix">';
 	  echo '<div class="uk-align-left">'.get_avatar( get_the_author_meta('ID'), 96 ).'</div>';
    	echo '<div class="uk-text-large uk-text-bold">'.get_the_author_meta('display_name').'</div>';
 		echo wpautop(get_the_author_meta('description'));
@@ -200,7 +200,7 @@ beans_add_smart_action( 'beans_footer_credit_right_text_output', 'human_droid_fo
 
 function human_droid_footer() { ?>
 
-  <a href="http://themes.kanishkkunal.in/human-droid/" target="_blank" title="Human Droid theme for WordPress">Human Droid</a> theme for <a href="http://wordpress.org" target="_blank">WordPress</a>. Built-with <a href="http://www.getbeans.io/" title="Beans Framework for WordPress" target="_blank">Beans</a>.
+  <a href="http://themes.kanishkkunal.in/human-droid/" target="_blank" title="HumanDroid theme for WordPress">HumanDroid</a> theme for <a href="http://wordpress.org" target="_blank">WordPress</a>. Built-with <a href="http://www.getbeans.io/" title="Beans Framework for WordPress" target="_blank">Beans</a>.
 
 <?php }
 
@@ -210,7 +210,9 @@ beans_add_smart_action( 'widgets_init', 'human_droid_register_widgets');
 function human_droid_register_widgets() {
 			//Include widget classes
 	 		require_once('widgets/posts.php');
+	 		require_once('widgets/social.php');
 
 	 		// Regidter widgets
 			register_widget('HumanDroid_Posts_Widget');
+			register_widget( 'HumanDroid_SocialWidget' );
 }
