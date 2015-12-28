@@ -114,8 +114,8 @@ function human_droid_layout_grid_settings( $layouts ) {
 
 	return array_merge( $layouts, array(
 		'grid' => 10,
-		'sidebar_primary' => 3,
-		'sidebar_secondary' => 3,
+		'sidebar_primary' => 2,
+		'sidebar_secondary' => 2,
 	) );
 
 }
