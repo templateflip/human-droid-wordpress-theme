@@ -74,7 +74,8 @@ body:not(.single) .uk-article-title {
 
 body:not(.single) .uk-panel-box,
 body:not(.single) .uk-article,
-.single .tm-content {
+.single .tm-content,
+.tm-social-profile.uk-panel {
 	padding: @tm-content-gutter-vertical @tm-content-gutter-horizontal @tm-content-gutter-vertical / 2;
 	border: 1px solid @global-border;
 	background-color: #fff;
@@ -154,6 +155,30 @@ body:not(.single) .uk-article,
  ========================================================================== */
 .tm-widget {
  color: @global-muted-color;
+}
+
+.tm-social-profile img {
+	margin-top: 5px;
+}
+
+.tm-social-profile h3.tm-profile-name {
+		color: @global-color;
+		font-size: 20px;
+		margin-bottom: 0;
+}
+
+.tm-profile-desc, .tm-profile-loc {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.tm-social-profile hr {
+	margin-left: -@panel-box-padding;
+	margin-right: -@panel-box-padding;
+}
+
+.tm-social-profile [class*="uk-icon"] {
+	padding: 6px;
 }
 
 [class*="widget_recent"] ul li:not( :last-of-type ) {
