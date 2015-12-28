@@ -32,6 +32,14 @@ function human_droid_init() {
 	register_nav_menu('footer-menu', __( 'Footer Menu', 'human-droid'));
 }
 
+// Force three column layout.
+add_filter( 'beans_layout', 'beans_child_force_layout' );
+
+function beans_child_force_layout() {
+
+    return 'sp_c_ss';
+
+}
 
 // Setup document fragements, markups and attributes
 beans_add_smart_action( 'wp', 'human_droid_setup_document' );
