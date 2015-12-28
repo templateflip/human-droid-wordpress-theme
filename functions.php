@@ -52,9 +52,8 @@ function human_droid_setup_document() {
 	beans_add_attribute( 'beans_primary_menu', 'class', 'uk-float-left' );
 	beans_remove_action( 'beans_site_title_tag' );
 
-	// Breadcrumb
-	if(!is_archive())
-		beans_remove_action( 'beans_breadcrumb' );
+	// Remove Breadcrumb
+	beans_remove_action( 'beans_breadcrumb' );
 
 	// Navigation
 	beans_add_attribute( 'beans_sub_menu_wrap', 'class', 'uk-dropdown-center' );
