@@ -47,8 +47,10 @@ beans_add_smart_action( 'wp', 'human_droid_setup_document' );
 function human_droid_setup_document() {
 
 	// Header and Primary Menu
-	beans_remove_attribute( 'beans_site_branding', 'class', 'uk-float-left' );
+	beans_remove_action( 'beans_site_title_tag' );
 	beans_remove_attribute( 'beans_primary_menu', 'class', 'uk-float-right' );
+	beans_add_attribute( 'beans_primary_menu', 'class', 'uk-float-left' );
+	beans_remove_action( 'beans_site_title_tag' );
 
 	// Breadcrumb
 	if(!is_archive())
