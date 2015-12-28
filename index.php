@@ -1,46 +1,54 @@
 <?php
-/**
- * The main template file.
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
- *
- * @package HumanDroid
- */
+// Setup human-droid
+beans_add_smart_action( 'beans_before_load_document', 'human_droid_index_setup_document' );
 
-get_header(); ?>
+function human_droid_index_setup_document() {
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	// Posts grid
+	beans_add_attribute( 'beans_content', 'class', 'tm-posts-grid uk-grid uk-grid-width-small-1-2 uk-grid-width-medium-1-2' );
+	beans_add_attribute( 'beans_content', 'data-uk-grid-margin', '' );
+	beans_add_attribute( 'beans_content', 'data-uk-grid-match', "{target:'.uk-panel'}" );
+	beans_wrap_inner_markup( 'beans_post', 'human_droid_post_panel', 'div', array(
+	  'class' => 'uk-panel uk-panel-box'
+	) );
 
-		<?php if ( have_posts() ) : ?>
+	// Post content
+	beans_remove_attribute( 'beans_content', 'class', 'tm-centered-content' );
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+	// Post article
+	beans_remove_attribute( 'beans_post', 'class', 'uk-article' );
 
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-				?>
+	// Post meta
+	beans_remove_action( 'beans_post_meta_tags' );
 
-			<?php endwhile; ?>
+	// Post image
+	beans_modify_action( 'beans_post_image', 'beans_post_header_before_markup', 'beans_post_image' );
 
-			<?php developr_paging_nav(); ?>
+	// Post title
+	beans_add_attribute( 'beans_post_title', 'class', 'uk-margin-small-top uk-h2' );
 
-		<?php else : ?>
+	// Remove the post content.
+	beans_remove_action( 'beans_post_content' );
 
-			<?php get_template_part( 'content', 'none' ); ?>
+	// Post more link
+	beans_add_attribute( 'beans_post_more_link', 'class', 'uk-button uk-button-primary uk-button-small' );
 
-		<?php endif; ?>
+	// Posts pagination
+	beans_modify_action_hook( 'beans_posts_pagination', 'beans_content_after_markup' );
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+}
 
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+// Resize post image (filter)
+beans_add_smart_action( 'beans_edit_post_image_args', 'human_droid_index_post_image_args' );
+
+function human_droid_index_post_image_args( $args ) {
+
+	$args['resize'] = array( 430, 250, true ); //430, 250
+
+	return $args;
+
+}
+
+
+// Load beans document
+beans_load_document();

@@ -1,38 +1,61 @@
 <?php
-/**
- * The template for displaying Search Results pages.
- *
- * @package HumanDroid
- */
 
-get_header(); ?>
+// Modify the search page markup
+beans_add_smart_action( 'beans_before_load_document', 'bench_search_setup_document' );
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+function bench_search_setup_document() {
 
-		<?php if ( have_posts() ) : ?>
+    // Post
+    beans_add_attribute( 'beans_search_title', 'class', 'uk-margin-bottom-remove' );
+    beans_add_attribute( 'beans_content', 'class', 'uk-article' );
+    beans_remove_attribute( 'beans_post', 'class', 'uk-article' );
+    beans_modify_markup( 'beans_post_title', 'h2' );
+    beans_add_attribute( 'beans_post_title', 'class', 'uk-h2' );
+    beans_add_attribute( 'beans_post', 'class', 'uk-grid-margin' );
 
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'human-droid' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
+    // Post image
+    beans_remove_action( 'beans_post_image' );
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+    // Post meta
+    beans_remove_action( 'beans_post_meta' );
+    beans_remove_action( 'beans_post_meta_tags' );
+    beans_remove_action( 'beans_post_meta_categories' );
 
-				<?php get_template_part( 'content', 'search' ); ?>
+    // Remove article search
+    beans_remove_output( 'beans_no_post_search_form' );
 
-			<?php endwhile; ?>
+}
 
-			<?php developr_paging_nav(); ?>
 
-		<?php else : ?>
+// Add the search form
+beans_add_smart_action( 'beans_search_title_after_markup', 'bench_search_field' );
 
-			<?php get_template_part( 'content', 'none' ); ?>
+function bench_search_field( $content ) {
 
-		<?php endif; ?>
+	echo beans_open_markup( 'bench_search_content', 'div', array( 'class' => 'uk-grid-margin' ) );
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+    	get_search_form();
 
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+   	echo beans_close_markup( 'bench_search_content', 'div' );
+
+}
+
+
+// Clean up the search results item markup
+beans_add_smart_action( 'the_content', 'bench_search_content' );
+
+function bench_search_content( $content ) {
+
+    $output = beans_open_markup( 'bench_search_content', 'p' );
+
+    	$output .= beans_output( 'bench_search_post_content', substr( strip_tags( $content ), 0, 150 ) . ' ...' );
+
+   	$output .= beans_close_markup( 'bench_search_content', 'p' );
+
+   	return $output;
+
+}
+
+
+// Load beans document.
+beans_load_document();
