@@ -3,6 +3,8 @@
 // Include Beans
 require_once( get_template_directory() . '/lib/init.php' );
 
+/* Helpers and utility functions */
+require_once 'include/helpers.php';
 
 // Remove Beans Default Styling
 remove_theme_support( 'beans-default-styling' );
@@ -201,3 +203,14 @@ function human_droid_footer() { ?>
   <a href="http://themes.kanishkkunal.in/human-droid/" target="_blank" title="Human Droid theme for WordPress">Human Droid</a> theme for <a href="http://wordpress.org" target="_blank">WordPress</a>. Built-with <a href="http://www.getbeans.io/" title="Beans Framework for WordPress" target="_blank">Beans</a>.
 
 <?php }
+
+//Setup Widgets
+beans_add_smart_action( 'widgets_init', 'human_droid_register_widgets');
+
+function human_droid_register_widgets() {
+			//Include widget classes
+	 		require_once('widgets/posts.php');
+
+	 		// Regidter widgets
+			register_widget('HumanDroid_Posts_Widget');
+}

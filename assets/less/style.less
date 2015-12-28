@@ -152,6 +152,26 @@ body:not(.single) .uk-article,
 
 /* Widgets
  ========================================================================== */
+.tm-widget {
+ color: @global-muted-color;
+}
+
+[class*="widget_recent"] ul li:not( :last-of-type ) {
+    margin-bottom: 10px;
+}
+
+.tm-widget li a, .tagcloud a {
+	color: @base-body-color;
+}
+
+.tm-widget li a:hover, .tagcloud a:hover {
+	text-decoration: none;
+	color: @base-link-color;
+}
+
+.tm-widget h3 {
+	color: @global-muted-color;
+}
 
 .widget_calendar caption {
     background-color: #4C4C4C;
@@ -197,6 +217,17 @@ body:not(.single) .uk-article,
     -webkit-column-gap: 20px;
     column-count: 2;
     column-gap: 20px;
+}
+
+.tm-placeholder-img {
+	width: 48px;
+
+	i {
+	  font-size: 54px;
+		margin-top: -5px;
+		padding-right: 4px;
+		color: @global-muted-color;
+	}
 }
 
 
