@@ -98,7 +98,7 @@ function human_droid_setup_document() {
 // Author profile in posts
 function human_droid_author_profile() {
 	echo beans_open_markup( 'human_droid_author_profile', 'div',  array( 'class' => 'uk-panel' ) );
-	echo '<h3 class="uk-panel-title">'.__('About the author', 'human-droid').'</h3>';
+	echo '<h3 class="uk-panel-title">'.__('Author', 'human-droid').'</h3>';
 	echo '<div class="uk-clearfix">';
 	  echo '<div class="uk-align-left">'.get_avatar( get_the_author_meta('ID'), 96 ).'</div>';
    	echo '<div class="uk-text-large uk-text-bold">'.get_the_author_meta('display_name').'</div>';
