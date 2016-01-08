@@ -138,3 +138,28 @@ function human_droid_footer_right() { ?>
   <a href="http://themes.kanishkkunal.in/human-droid/" target="_blank" title="HumanDroid theme for WordPress">HumanDroid</a> theme for <a href="http://wordpress.org" target="_blank">WordPress</a>. Built-with <a href="http://www.getbeans.io/" title="Beans Framework for WordPress" target="_blank">Beans</a>.
 
 <?php }
+
+
+//Customizer fields
+
+//Additional Header & Footer Codes (for Google Analytics)
+add_action( 'init', 'human_droid_customization_fields' );
+function human_droid_customization_fields() {
+
+	$fields = array(
+		array(
+			'id' => 'human_droid_head_code',
+			'label' => __( 'Additional Head Code', 'human-droid' ),
+			'type' => 'textarea',
+			'default' => ''
+		)
+	);
+
+	beans_register_wp_customize_options( $fields, 'human_droid_custom_code', array( 'title' => __( 'Custom Code', 'human-droid' ), 'priority' => 1100 ) );
+}
+
+add_action('beans_head_append_markup', 'human_droid_custom_head_code');
+
+function human_droid_custom_head_code() {
+	echo get_theme_mod( 'human_droid_head_code', '' );
+}
