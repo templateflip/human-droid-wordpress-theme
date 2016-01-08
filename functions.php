@@ -23,6 +23,7 @@ function human_droid_enqueue_uikit_assets() {
 
 }
 
+
 //Setup Theme
 beans_add_smart_action( 'init', 'human_droid_init' );
 
@@ -32,10 +33,11 @@ function human_droid_init() {
 	remove_post_type_support( 'page', 'comments' );
 }
 
-// Force one column layout.
-add_filter( 'beans_layout', 'beans_child_force_layout' );
 
-function beans_child_force_layout() {
+// Default one column layout.
+add_filter( 'beans_default_layout', 'human_droid_default_layout' );
+
+function human_droid_default_layout() {
 
     return 'c';
 
