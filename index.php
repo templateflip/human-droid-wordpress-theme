@@ -12,7 +12,7 @@ function human_droid_index_setup_document() {
 	beans_remove_action( 'beans_post_meta_categories' );
 
 	// Post more link
-	beans_add_attribute( 'beans_post_more_link', 'class', 'uk-button primary-ghost-buton uk-button-small uk-margin-bottom' );
+	beans_add_attribute( 'beans_post_more_link', 'class', 'uk-button primary-ghost-button uk-button-small uk-margin-bottom' );
 
 }
 
