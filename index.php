@@ -4,6 +4,9 @@ beans_add_smart_action( 'beans_before_load_document', 'human_droid_index_setup_d
 
 function human_droid_index_setup_document() {
 
+  //post title
+  beans_add_attribute('beans_post_title', 'class', 'uk-h2');
+
 	// Post meta
 	beans_remove_action( 'beans_post_meta_tags' );
 	beans_remove_action( 'beans_post_meta_categories' );
