@@ -47,6 +47,11 @@ function human_droid_default_layout() {
 beans_add_smart_action( 'wp', 'human_droid_setup_document' );
 
 function human_droid_setup_document() {
+	// Remove the site title and site title tag.
+	beans_remove_action( 'beans_site_branding' );
+	
+	//Navigation menu
+	beans_remove_attribute( 'beans_primary_menu', 'class', 'uk-float-right' );
 
 }
 
