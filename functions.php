@@ -66,6 +66,11 @@ function human_droid_setup_document() {
 	beans_remove_attribute('beans_main_grid', 'class', 'uk-grid');
 	beans_add_attribute('beans_main_grid', 'class', 'uk-panel uk-panel-box uk-panel-space');
 
+	//Post meta
+	beans_add_attribute( 'beans_post_meta_author', 'class', 'uk-text-muted' );
+	beans_add_attribute( 'beans_post_meta_date', 'class', 'uk-text-muted' );
+	beans_add_attribute( 'beans_post_meta_comments', 'class', 'uk-text-muted' );
+
 	// Footer
 	// Remove floats
 	beans_remove_attribute('beans_footer_credit_left', 'class', 'uk-align-medium-left');
@@ -74,6 +79,19 @@ function human_droid_setup_document() {
   beans_add_attribute('beans_footer_credit_right', 'class', 'uk-display-block');
 	// Center align the whole thing
 	beans_add_attribute('beans_footer_credit', 'class', 'uk-text-center');
+
+}
+
+// Modify beans post meta items (filter)
+beans_add_smart_action( 'beans_post_meta_items', 'human_droid_post_meta_items' );
+
+function human_droid_post_meta_items( $items ) {
+
+	// Move meta positions
+	$items['author'] = 1;
+  $items['date'] = 2;
+
+	return $items;
 
 }
 
