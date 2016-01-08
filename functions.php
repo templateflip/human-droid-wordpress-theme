@@ -59,6 +59,10 @@ function human_droid_setup_document() {
 	//Remove offcanvas menu
 	beans_remove_action('beans_primary_menu_offcanvas_button');
 
+	//Enclose main content in panel
+	beans_remove_attribute('beans_main_grid', 'class', 'uk-grid');
+	beans_add_attribute('beans_main_grid', 'class', 'uk-panel uk-panel-box uk-panel-space');
+
 	// Footer
 	// Remove floats
 	beans_remove_attribute('beans_footer_credit_left', 'class', 'uk-align-medium-left');
