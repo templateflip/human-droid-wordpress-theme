@@ -97,10 +97,27 @@
 
   h1 {
     font-size: 42px;
+    line-height: 50px;
   }
 
   h2 {
     font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media (max-width: @breakpoint-small-max) {
+    .tm-profile-name {
+      left: 20px;
+    }
+    h1 {
+      font-size: 28px;
+      line-height: 32px;
+    }
+
+    h2 {
+      font-size: 16px;
+      line-height: 18px;
+    }
   }
 }
 
