@@ -87,7 +87,9 @@ function human_droid_setup_document() {
 }
 
 function human_droid_edit_link() {
+	if( !is_page_template('page_profile-page.php') ) {
 		edit_post_link( __( 'Edit', 'human-droid' ), '<div class="uk-margin-bottom-small uk-text-small uk-align-right"><i class="uk-icon-pencil-square-o"></i> ', '</div>' );
+	}
 }
 
 function human_droid_add_nav_menu_atts( $atts, $item, $args ) {
