@@ -15,25 +15,44 @@
   ul {
     padding-left: 0;
     display: inline-block;
+    list-style: none;
     margin: 0 auto;
     text-align: center;
   }
 
   li {
-    padding: 0 15px;
+    margin: 0 15px;
+    position: relative;
+    text-align: center;
+    display: inline-block;
   }
 
-  [class*="uk-icon-"] {
+  li > [class*="uk-icon-"]:before {
+    display: block;
     font-size: 250%;
     vertical-align: -22%;
+    color: #ecf0f1;
+    color: rgba(255,255,255,0.5);
+    font-family: FontAwesome;
+    padding-bottom: 10px;
   }
 
   li > a {
     display: block;
-    padding-top: 5px;
     font-size: 12.8px;
     font-family: @base-body-font-family;
     text-transform: uppercase;
+    color: #ecf0f1;
+    color: rgba(255,255,255,0.6);
+    z-index: 999;
+  }
+
+  li.current-menu-item > a {
+    color: #fff;
+  }
+
+  li.current-menu-item > [class*="uk-icon-"]:before {
+    color: #fff;
   }
 }
 

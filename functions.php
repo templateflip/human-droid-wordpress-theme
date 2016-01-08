@@ -90,6 +90,17 @@ function human_droid_edit_link() {
 		edit_post_link( __( 'Edit', 'human-droid' ), '<div class="uk-margin-bottom-small uk-text-small uk-align-right"><i class="uk-icon-pencil-square-o"></i> ', '</div>' );
 }
 
+function human_droid_add_nav_menu_atts( $atts, $item, $args ) {
+	//check if icon class is applied to menu and apply equivalen uk-icon to nav menu link
+	if(count($item->classes) >= 1) {
+		if(substr($item->classes[0], 0, 5) === "icon-") {
+			$atts['class'] = $atts['class'].' uk-'.$item->classes[0];
+		}
+	}
+  return $atts;
+}
+add_filter( 'nav_menu_link_attributes', 'human_droid_add_nav_menu_atts', 10, 4);
+
 // Modify beans post meta items (filter)
 beans_add_smart_action( 'beans_post_meta_items', 'human_droid_post_meta_items' );
 
