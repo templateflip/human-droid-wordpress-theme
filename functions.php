@@ -51,8 +51,13 @@ function human_droid_setup_document() {
 	beans_remove_action( 'beans_site_branding' );
 
 	// Navigation menu
+	// Remove default styling and uk-navbar properties
+  beans_remove_attribute( 'beans_primary_menu', 'class', 'uk-navbar' );
 	beans_remove_attribute( 'beans_primary_menu', 'class', 'uk-float-right' );
-
+  beans_remove_attribute('beans_menu[_navbar][_primary]', 'class', 'uk-navbar-nav');
+	beans_remove_attribute('beans_menu[_navbar][_primary]', 'class', 'uk-visible-large ');
+	//Remove offcanvas menu
+	beans_remove_action('beans_primary_menu_offcanvas_button');
 
 	// Footer
 	// Remove floats
@@ -62,7 +67,7 @@ function human_droid_setup_document() {
   beans_add_attribute('beans_footer_credit_right', 'class', 'uk-display-block');
 	// Center align the whole thing
 	beans_add_attribute('beans_footer_credit', 'class', 'uk-text-center');
-	
+
 }
 
 // Add footer content (filter)

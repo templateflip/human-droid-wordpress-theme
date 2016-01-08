@@ -1,3 +1,37 @@
 /* Font
  ========================================================================== */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600);
+
+/* Header
+ ========================================================================== */
+.tm-header {
+  padding-top: 40px;
+}
+
+.tm-primary-menu {
+  text-align: center;
+
+  ul {
+    padding-left: 0;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  li {
+    padding: 0 15px;
+  }
+
+  [class*="uk-icon-"] {
+    font-size: 250%;
+    vertical-align: -22%;
+  }
+
+  li > a {
+    display: block;
+    padding-top: 5px;
+    font-size: 12.8px;
+    font-family: @base-body-font-family;
+    text-transform: uppercase;
+  }
+}
