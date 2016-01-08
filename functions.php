@@ -49,10 +49,20 @@ beans_add_smart_action( 'wp', 'human_droid_setup_document' );
 function human_droid_setup_document() {
 	// Remove the site title and site title tag.
 	beans_remove_action( 'beans_site_branding' );
-	
-	//Navigation menu
+
+	// Navigation menu
 	beans_remove_attribute( 'beans_primary_menu', 'class', 'uk-float-right' );
 
+
+	// Footer
+	// Remove floats
+	beans_remove_attribute('beans_footer_credit_left', 'class', 'uk-align-medium-left');
+	beans_remove_attribute('beans_footer_credit_right', 'class', 'uk-align-medium-right');
+	// Put right footer in it's own line
+  beans_add_attribute('beans_footer_credit_right', 'class', 'uk-display-block');
+	// Center align the whole thing
+	beans_add_attribute('beans_footer_credit', 'class', 'uk-text-center');
+	
 }
 
 // Add footer content (filter)
