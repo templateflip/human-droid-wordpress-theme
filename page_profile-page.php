@@ -5,14 +5,17 @@ beans_add_smart_action( 'beans_before_load_document', 'human_droid_profile_setup
 function human_droid_profile_setup_document() {
   beans_remove_attribute('beans_main_grid', 'class', 'uk-panel uk-panel-box uk-panel-space');
 
-  beans_add_attribute('beans_post', 'class', 'tm-profile-main');
+  beans_add_attribute('beans_post', 'class', 'tm-profile-main uk-overlay');
+  beans_add_attribute('beans_post_header', 'class', 'uk-overlay-panel uk-overlay-background');
 }
 
 beans_add_smart_action('beans_post_header_prepend_markup', 'human_droid_profile_header');
 
 function human_droid_profile_header() {
-  echo '<h1>'.get_bloginfo( 'name' ).'</h1>';
-  echo '<h2>'.get_bloginfo( 'description' ).'</h2>';
+  echo '<div class="tm-profile-name">';
+    echo '<h1>'.get_bloginfo( 'name' ).'</h1>';
+    echo '<h2>'.get_bloginfo( 'description' ).'</h2>';
+  echo '</div>';
 }
 
 // Resize featured image (filter)

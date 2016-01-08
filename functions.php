@@ -18,6 +18,9 @@ function human_droid_enqueue_uikit_assets() {
 	// Enqueue uikit overwrite theme folder
 	beans_uikit_enqueue_theme( 'human-droid', get_stylesheet_directory_uri() . '/assets/less/uikit' );
 
+	// Enuque uikit overlay component
+	beans_uikit_enqueue_components( array( 'overlay' ) );
+
 	// Add the theme style as a uikit fragment to have access to all the variables
 	beans_compiler_add_fragment( 'uikit', get_stylesheet_directory_uri() . '/assets/less/style.less', 'less' );
 
@@ -116,10 +119,19 @@ function human_droid_post_meta_items( $items ) {
 
 }
 
-// Add footer content (filter)
-beans_add_smart_action( 'beans_footer_credit_right_text_output', 'human_droid_footer' );
+// Modify the footer credit left text.
+add_filter( 'beans_footer_credit_text_output', 'human_droid_footer_left' );
 
-function human_droid_footer() { ?>
+function human_droid_footer_left() {
+
+	return '© <a href="'.get_site_url().'">'.get_bloginfo( 'name' ).'</a>';
+
+}
+
+// Modify the footer credit right text.
+beans_add_smart_action( 'beans_footer_credit_right_text_output', 'human_droid_footer_right' );
+
+function human_droid_footer_right() { ?>
 
   <a href="http://themes.kanishkkunal.in/human-droid/" target="_blank" title="HumanDroid theme for WordPress">HumanDroid</a> theme for <a href="http://wordpress.org" target="_blank">WordPress</a>. Built-with <a href="http://www.getbeans.io/" title="Beans Framework for WordPress" target="_blank">Beans</a>.
 
