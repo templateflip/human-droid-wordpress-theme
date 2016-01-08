@@ -71,6 +71,10 @@ function human_droid_setup_document() {
 	beans_add_attribute( 'beans_post_meta_date', 'class', 'uk-text-muted' );
 	beans_add_attribute( 'beans_post_meta_comments', 'class', 'uk-text-muted' );
 
+	if ( is_user_logged_in() && is_singular()) {
+		beans_add_smart_action('beans_post_header_before_markup', 'human_droid_edit_link');
+	}
+
 	// Footer
 	// Remove floats
 	beans_remove_attribute('beans_footer_credit_left', 'class', 'uk-align-medium-left');
@@ -80,6 +84,10 @@ function human_droid_setup_document() {
 	// Center align the whole thing
 	beans_add_attribute('beans_footer_credit', 'class', 'uk-text-center');
 
+}
+
+function human_droid_edit_link() {
+		edit_post_link( __( 'Edit', 'human-droid' ), '<div class="uk-margin-bottom-small uk-text-small uk-align-right"><i class="uk-icon-pencil-square-o"></i> ', '</div>' );
 }
 
 // Modify beans post meta items (filter)
