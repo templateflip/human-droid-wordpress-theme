@@ -80,6 +80,12 @@ function human_droid_setup_document() {
 		beans_add_smart_action('beans_post_header_before_markup', 'human_droid_edit_link');
 	}
 
+	// Only applies to singular and not pages
+ 	if ( is_singular() && !is_page() ) {
+ 		//remove featured image
+ 		beans_remove_action( 'beans_post_image' );
+ 	}
+
 	// Footer
 	// Remove floats
 	beans_remove_attribute('beans_footer_credit_left', 'class', 'uk-align-medium-left');
