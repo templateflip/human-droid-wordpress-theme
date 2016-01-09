@@ -24,6 +24,12 @@ function human_droid_enqueue_uikit_assets() {
 	// Add the theme style as a uikit fragment to have access to all the variables
 	beans_compiler_add_fragment( 'uikit', get_stylesheet_directory_uri() . '/assets/less/style.less', 'less' );
 
+	$behance_key = get_theme_mod( 'human_droid_behance_api_key', '' );
+  if( !empty($behance_key) ) {
+		// Add custom JavaScript files for theme
+		beans_compiler_add_fragment( 'uikit', get_stylesheet_directory_uri() . '/assets/js/handlebars.min.js', 'js' );
+	}
+
 }
 
 
@@ -170,8 +176,16 @@ function human_droid_customization_fields() {
 			'id' => 'human_droid_head_code',
 			'label' => __( 'Additional Head Code', 'human-droid' ),
 			'type' => 'textarea',
+			'description' => 'Add additional code that goes in head here (e.g. Google Analytics code)',
 			'default' => ''
-		)
+		),
+		array(
+			'id' => 'human_droid_behance_api_key',
+			'label' => __( 'Behance API Key', 'human-droid' ),
+			'type' => 'text',
+			'description' => 'Enter behance API key here to use the Behance profile shortcode',
+			'default' => ''
+		),
 	);
 
 	beans_register_wp_customize_options( $fields, 'human_droid_custom_code', array( 'title' => __( 'Custom Code', 'human-droid' ), 'priority' => 1100 ) );
