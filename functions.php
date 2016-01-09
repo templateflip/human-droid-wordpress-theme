@@ -182,3 +182,6 @@ add_action('beans_head_append_markup', 'human_droid_custom_head_code');
 function human_droid_custom_head_code() {
 	echo get_theme_mod( 'human_droid_head_code', '' );
 }
+
+/* Customize Jetpack */
+require 'include/jetpack-custom.php';
