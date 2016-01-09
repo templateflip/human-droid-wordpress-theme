@@ -20,37 +20,32 @@
 
     ob_start();
 	?>
-  <div id="portfolio" class="portfolio-area clearfix">
+  <div id="portfolio">
     <script id="portfolio-template" type="text/x-handlebars-template">
-    		<ul class="portfolio-list clearfix">
+    		<div class="portfolio-list uk-grid">
     			{{#each projects}}
-    			<li class="portfolio-item">
+    			<div class="portfolio-item uk-width-medium-1-3 uk-width-small-1-2">
     				<div class="portfolio-content">
-    					<figure class="portfolio-cover" title="{{this.name}}" data-project-id="{{this.id}}">
+    					<figure class="uk-thumbnail" title="{{this.name}}" data-project-id="{{this.id}}">
                             <a href="{{this.url}}" target="blank">
     						{{#if this.covers.[404]}}
-    						<img class="portfolio-image" src="{{this.covers.[404]}}" alt="">
+    						<img class="portfolio-image" src="{{this.covers.[404]}}" alt="{{this.name}}">
     						{{else}}
     							{{#if this.covers.[230]}}
-    							<img class="portfolio-image" src="{{this.covers.[230]}}" alt="">
+    							<img class="portfolio-image" src="{{this.covers.[230]}}" alt="{{this.name}}">
     							{{else}}
-    							<img class="portfolio-image" src="{{this.covers.[202]}}" alt="">
+    							<img class="portfolio-image" src="{{this.covers.[202]}}" alt="{{this.name}}">
     							{{/if}}
     						{{/if}}
                             </a>
+                  <figcaption class="uk-thumbnail-caption">
+                    <a href="{{this.url}}" target="blank">{{this.name}}</a>
+                  </figcaption>
     					</figure>
-    					<h2 class="portfolio-title"><a href="{{this.url}}" target="blank">{{this.name}}</a></h2>
-    					<div class="portfolio-fields">
-    						<ul class="field-list">
-    						{{#each this.fields}}
-    							<li class="field-item">{{this}}</li>
-    						{{/each}}
-    						</ul>
-    					</div>
     				</div>
-    			</li>
+    			</div>
     			{{/each}}
-    		</ul>
+    		</div>
   		</script>
     </div>
     <?php
