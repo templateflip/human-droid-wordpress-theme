@@ -86,6 +86,9 @@ function human_droid_setup_document() {
  		beans_remove_action( 'beans_post_image' );
  	}
 
+	//comments
+	beans_add_attribute('beans_moderator_badge', 'class', 'uk-badge-success');
+
 	// Footer
 	// Remove floats
 	beans_remove_attribute('beans_footer_credit_left', 'class', 'uk-align-medium-left');
@@ -124,6 +127,16 @@ function human_droid_post_meta_items( $items ) {
   $items['date'] = 2;
 
 	return $items;
+
+}
+
+
+// Add avatar uikit circle class (filter)
+beans_add_smart_action( 'get_avatar', 'fast_monkey_avatar' );
+
+function fast_monkey_avatar( $output ) {
+
+	return str_replace( "class='avatar", "class='avatar uk-border-circle", $output ) ;
 
 }
 
