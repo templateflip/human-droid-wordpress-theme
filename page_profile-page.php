@@ -18,6 +18,7 @@ function human_droid_profile_setup_document() {
   }
   else {
     beans_add_attribute('beans_post_header', 'class', 'tm-light-background');
+    beans_add_attribute('beans_post_image', 'class', 'tm-light-background');
   }
 }
 
