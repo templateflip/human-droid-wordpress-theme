@@ -28,7 +28,6 @@ function human_droid_enqueue_uikit_assets() {
   if( !empty($behance_key) ) {
 		// Add custom JavaScript files for theme
 		beans_compiler_add_fragment( 'uikit', get_stylesheet_directory_uri() . '/assets/js/handlebars.min.js', 'js' );
-		beans_compiler_add_fragment( 'uikit', get_stylesheet_directory_uri() . '/assets/js/behance-feed.js', 'js' );
 	}
 
 }
