@@ -4,6 +4,7 @@
 
 @global-border-radius: 4px;
 @global-background-color: #1a1d23;
+@global-light-color: #ecf0f1;
 
 body {
   background-color: @global-background-color;
@@ -52,7 +53,7 @@ body.custom-background {
     display: block;
     font-size: 250%;
     vertical-align: -22%;
-    color: #ecf0f1;
+    color: @global-light-color;
     color: rgba(255,255,255,0.5);
     font-family: FontAwesome;
     padding-bottom: 10px;
@@ -61,10 +62,10 @@ body.custom-background {
   li > a {
     display: block;
     font-size: 12.8px;
-    font-weight: 300;
+    font-weight: 400;
     font-family: @base-body-font-family;
     text-transform: uppercase;
-    color: #ecf0f1;
+    color: @global-light-color;
     color: rgba(255,255,255,0.6);
     z-index: 999;
   }
@@ -221,8 +222,14 @@ body.custom-background {
 
 /* Footer */
 .tm-footer {
-  margin-top: 20px;
+  margin-top: 60px;
   font-weight: 300;
+  color: @global-light-color;
+
+  a {
+    font-weight: 400;
+    color: @global-light-color;
+  }
 }
 
 
@@ -245,16 +252,6 @@ a {
 
 a.uk-text-muted:hover {
   color: @base-link-hover-color !important;
-}
-
-.uk-text-muted {
-  a {
-    color: lighten(@text-muted-color, 8);
-  }
-
-  a:hover {
-    color: @base-link-hover-color !important;
-  }
 }
 
 .primary-ghost-button {
@@ -306,7 +303,7 @@ a.uk-text-muted:hover {
   }
 
   .uk-thumbnail img {
-    border: 1px solid #ecf0f1;
+    border: 1px solid @global-light-color;
     padding: 4px;
     -webkit-box-shadow: 0px 4px 5px 0px rgba(50,50,50,0.45);
     -moz-box-shadow: 0px 4px 5px 0px rgba(50,50,50,0.45);

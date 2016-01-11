@@ -96,6 +96,8 @@ function human_droid_setup_document() {
 	beans_add_attribute('beans_moderator_badge', 'class', 'uk-badge-success');
 
 	// Footer
+	// Remove muted text, we will style on our own
+	beans_remove_attribute('beans_footer_credit', 'class', 'uk-text-muted');
 	// Remove floats
 	beans_remove_attribute('beans_footer_credit_left', 'class', 'uk-align-medium-left');
 	beans_remove_attribute('beans_footer_credit_right', 'class', 'uk-align-medium-right');
