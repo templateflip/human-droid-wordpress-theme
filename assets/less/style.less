@@ -69,11 +69,11 @@ body.custom-background {
     z-index: 999;
   }
 
-  li.current-menu-item > a, li.current-page-ancestor a {
+  li.current-menu-item > a, li.current-page-ancestor a, li.current_page_parent > a {
     color: #fff;
   }
 
-  li.current-menu-item > [class*="uk-icon-"]:before, li.current-page-ancestor > [class*="uk-icon-"]:before {
+  li.current-menu-item > [class*="uk-icon-"]:before, li.current-page-ancestor > [class*="uk-icon-"]:before, li.current_page_parent > [class*="uk-icon-"]:before {
     color: #fff;
   }
 }
@@ -88,6 +88,9 @@ body.custom-background {
 
 /* Profile page styles */
 .tm-profile-main {
+  width: 100%;
+  background: #fff;
+
   .uk-overlay-background {
     background: -moz-linear-gradient(45deg,  rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(0,0,0,0.9)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
@@ -100,6 +103,7 @@ body.custom-background {
 
   .tm-article-image {
     margin: 0;
+    text-align: right;
   }
 
   .tm-profile-name {
