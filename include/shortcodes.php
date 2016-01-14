@@ -66,7 +66,7 @@
 		$(document).ready(function () {
 		    //credit: http://creatiface.github.io/personal-portfolio/
 		    (function () {
-		        var behanceProjectAPI = 'http://www.behance.net/v2/users/' + userID + '/projects?callback=?&api_key=' + apiKey + '&per_page=' + perPage;
+		        var behanceProjectAPI = 'https://www.behance.net/v2/users/' + userID + '/projects?callback=?&api_key=' + apiKey + '&per_page=' + perPage;
 
 		        function setPortfolioTemplate() {
 		            var projectData = JSON.parse(sessionStorage.getItem('behanceProject')),
