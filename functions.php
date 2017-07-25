@@ -118,6 +118,9 @@ function human_droid_add_nav_menu_atts( $atts, $item, $args ) {
 	//check if icon class is applied to menu and apply equivalen uk-icon to nav menu link
 	if(count($item->classes) >= 1) {
 		if(substr($item->classes[0], 0, 5) === "icon-") {
+      if(!array_key_exists('class', $atts)) {
+         $atts['class'] = '';
+      }     
 			$atts['class'] = $atts['class'].' uk-'.$item->classes[0];
 		}
 	}
